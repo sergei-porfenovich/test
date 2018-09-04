@@ -1,0 +1,5 @@
+// Function for converting tracking in PSD to ems in CSS letter-spacing
+@function tracking($size) {
+  $trackingSize: $size / 1000;
+  @return #{$trackingSize}em;
+}

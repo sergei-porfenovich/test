@@ -1,0 +1,70 @@
+uuid: 7c326d22-2791-42e6-a901-9bf85d961843
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+_core:
+  default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
+name: 'Basic HTML'
+format: basic_html
+weight: -9
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -50
+    settings:
+      allowed_html: '<0 href hreflang> <1> <2> <3> <4 cite> <5> <6 type> <7 start type class=""> <8> <9> <10> <11> <12 id> <13 id> <14 id> <15 id> <16 id> <17 id> <18 class=""> <19> <20> <21 src alt height width data-entity-type data-entity-uuid data-align data-caption> <22> <strong> <em> <a href> <ul> <li> <ol> <blockquote> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p class> <h1 class> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <hr> <br> <i class> <a href class>'
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: -48
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: -47
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: -46
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: -45
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -43
+    settings:
+      filter_url_length: 72
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: -49
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -42
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -44
+    settings: {  }

@@ -1,0 +1,22 @@
+uuid: 9e8478ca-7e24-4587-847d-1f3f269ab3fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.employee
+  module:
+    - text
+id: node.employee.body
+field_name: body
+entity_type: node
+bundle: employee
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

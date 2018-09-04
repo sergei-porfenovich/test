@@ -1,0 +1,33 @@
+uuid: 926138cc-8e2c-43eb-8869-fdd4e42d90ac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9116407e-0d07-4eac-b169-0e59c8387030'
+  module:
+    - block_content
+    - ctools
+  theme:
+    - sunpower
+id: followus
+theme: sunpower
+region: footer_top
+weight: -6
+provider: null
+plugin: 'block_content:9116407e-0d07-4eac-b169-0e59c8387030'
+settings:
+  id: 'block_content:9116407e-0d07-4eac-b169-0e59c8387030'
+  label: 'Follow Us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

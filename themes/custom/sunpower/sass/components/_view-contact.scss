@@ -1,0 +1,57 @@
+// =============================================================================
+// VIEW - CONTACT
+// =============================================================================
+
+.view-contact {
+  @include inner;
+  margin-bottom: 40px;
+
+  // Content.
+  .view-content {
+    @include breakpoint($bp-medium-up) {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+
+      // Required to fake last item and maintain spacing.
+      &:after {
+        content: "";
+        flex: 1 1 100%;
+        max-width: percentage(1/2) - gutter();
+      }
+    }
+
+    @include breakpoint($bp-large-up) {
+
+      // Required to fake last item and maintain spacing.
+      &:after {
+        max-width: percentage(1/3) - gutter();
+      }
+    }
+  }
+
+  // Item.
+  &__item {
+    @include font-size(20, 30);
+    margin-bottom: 60px;
+
+    @include breakpoint($bp-medium-up) {
+      flex: 1 1 100%;
+      max-width: percentage(1/2) - gutter();
+    }
+
+    @include breakpoint($bp-large-up) {
+      max-width: percentage(1/3) - gutter();
+    }
+
+    // Last.
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Node content.
+  .node__content {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,33 @@
+uuid: f212072d-63e6-41e9-89e0-e21d0643236f
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.employee.body
+    - field.field.node.employee.field_image
+    - node.type.employee
+  module:
+    - text
+    - user
+id: node.employee.teaser
+targetEntityType: node
+bundle: employee
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  field_image: true

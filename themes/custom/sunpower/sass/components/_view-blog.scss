@@ -1,0 +1,48 @@
+// =============================================================================
+// VIEW - BLOG
+// =============================================================================
+
+.view-blog {
+
+  // Image.
+  &__image {
+    margin-bottom: 20px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  // Submitted.
+  &__submitted {
+    @include font-size(14, 14);
+    color: #999;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  // Title.
+  &__title {
+    margin-bottom: 5px;
+
+    // Links.
+    a,
+    a:visited {
+      text-decoration: none;
+
+      // Hover and focus.
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Description.
+  &__body {
+    p {
+      @include font-size(16);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+uuid: bca6382c-8b44-442a-9426-a5f414f17c33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq_category
+    - node.type.faq
+  module:
+    - options
+id: node.faq.field_faq_category
+field_name: field_faq_category
+entity_type: node
+bundle: faq
+label: 'FAQ Category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

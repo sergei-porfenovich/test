@@ -1,0 +1,17 @@
+uuid: 4dfae0d3-e9a7-42f4-bfde-d00174ab42f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: blog_teaser_large
+label: 'Blog Teaser Large'
+effects:
+  431e5f51-fb76-40ae-ae76-8837bb4fb333:
+    uuid: 431e5f51-fb76-40ae-ae76-8837bb4fb333
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 420
+      height: 236
+      crop_type: focal_point

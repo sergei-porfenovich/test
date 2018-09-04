@@ -1,0 +1,55 @@
+// =============================================================================
+// PARAGRAPH - FOOTER LOGOS
+// =============================================================================
+
+#block-footerlogos {
+  padding: 20px;
+  text-align: center;
+
+  @include breakpoint($bp-medium-up) {
+    padding: 30px 0;
+  }
+
+  .field__item {
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 10px 20px;
+        padding: 0;
+
+        @include breakpoint($bp-medium-up) {
+          margin-bottom: 0;
+        }
+
+        @include breakpoint($bp-large-up) {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+
+        // First.
+        &:first-child {
+          margin-left: 0;
+        }
+
+        // Last.
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    // Image.
+    img {
+      display: block;
+      height: 30px;
+
+      @include breakpoint($bp-large-up) {
+        height: 50px;
+      }
+    }
+  }
+}

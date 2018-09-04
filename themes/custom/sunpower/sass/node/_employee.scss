@@ -1,0 +1,35 @@
+// =============================================================================
+// NODE - EMPLOYEE
+// =============================================================================
+
+.node--type-employee {
+
+  // Content.
+  .node__content {
+    @include breakpoint($bp-medium-up) {
+      display: flex;
+      flex-flow: wrap;
+    }
+  }
+}
+
+.node-employee {
+
+  // Image.
+  &__image {
+    margin-bottom: 20px;
+
+    @include breakpoint($bp-medium-up) {
+      margin-bottom: 0;
+      width: span(3);
+    }
+  }
+
+  // Body.
+  &__body {
+    @include breakpoint($bp-medium-up) {
+      padding-left: gutter() * 2;
+      width: span(9);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+uuid: 9bacf1d0-ed96-4d44-8696-27fbd1ee1d58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.body_and_form.field_body
+    - field.field.paragraph.body_and_form.field_form
+    - paragraphs.paragraphs_type.body_and_form
+  module:
+    - text
+    - webform
+id: paragraph.body_and_form.default
+targetEntityType: paragraph
+bundle: body_and_form
+mode: default
+content:
+  field_body:
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_form:
+    weight: 1
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

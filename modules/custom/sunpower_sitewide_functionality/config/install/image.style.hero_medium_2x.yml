@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_medium_2x
+label: 'Hero Medium 2x'
+effects:
+  d4188cc3-2109-4496-99fe-d9a2918f7333:
+    uuid: d4188cc3-2109-4496-99fe-d9a2918f7333
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 2040
+      height: 570
+      crop_type: focal_point
+pipeline: __default__

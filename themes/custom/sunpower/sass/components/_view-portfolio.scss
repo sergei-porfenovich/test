@@ -1,0 +1,99 @@
+// =============================================================================
+// VIEW - PORTFOLIO
+// =============================================================================
+
+.view-portfolio {
+  @include inner;
+
+  // Item.
+  &__item {
+    background-color: #f3f7f8;
+    margin-bottom: 20px;
+
+    @include breakpoint($bp-large-up) {
+      align-items: center;
+      display: flex;
+      margin-bottom: 40px;
+      padding-bottom: 0;
+    }
+
+    // Last.
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    // Odd.
+    &:nth-child(odd) {
+      @include breakpoint($bp-large-up) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  // Column.
+  &__column {
+    @include breakpoint($bp-large-up) {
+      width: 50%;
+    }
+
+    // Content.
+    &-content {
+      padding: 20px;
+    }
+  }
+
+  // Blockquote.
+  &__blockquote {
+    border: 0;
+    display: block;
+    position: relative;
+    padding-left: 5px;
+    quotes: "\201c" "\201d";
+
+    @include breakpoint($bp-large-up) {
+      padding-left: 60px;
+    }
+
+    // Quote start.
+    &:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 100px;
+      left: -40px;
+      line-height: 100%;
+      position: absolute;
+      top: -10px;
+
+      @include breakpoint($bp-large-up) {
+        left: 0;
+      }
+    }
+
+    p {
+      @include breakpoint($bp-large-up) {
+        @include font-size(24);
+      }
+    }
+
+    cite {
+      color: $brand--blue;
+      display: block;
+      font-style: normal;
+      text-align: right;
+
+      @include breakpoint($bp-large-up) {
+        @include font-size(20);
+      }
+    }
+  }
+
+  // Image.
+  &__image {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

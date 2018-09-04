@@ -1,0 +1,22 @@
+uuid: fe69ca10-f8a9-4b02-915c-b2a09cc03010
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sunpower
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: sunpower_messages
+theme: sunpower
+region: help
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

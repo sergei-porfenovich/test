@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.blog_teaser_large
+    - image.style.blog_teaser_large_2x
+    - image.style.blog_teaser_medium
+    - image.style.blog_teaser_medium_2x
+    - image.style.blog_teaser_small
+    - image.style.blog_teaser_small_2x
+  theme:
+    - sunpower
+id: blog_teaser
+label: 'Blog teaser'
+image_style_mappings:
+  -
+    breakpoint_id: sunpower.group1.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: blog_teaser_large
+  -
+    breakpoint_id: sunpower.group1.large
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: blog_teaser_large_2x
+  -
+    breakpoint_id: sunpower.group1.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: blog_teaser_medium
+  -
+    breakpoint_id: sunpower.group1.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: blog_teaser_medium_2x
+  -
+    breakpoint_id: sunpower.group1.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: blog_teaser_small
+  -
+    breakpoint_id: sunpower.group1.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: blog_teaser_small_2x
+breakpoint_group: SunPower
+fallback_image_style: blog_teaser_large

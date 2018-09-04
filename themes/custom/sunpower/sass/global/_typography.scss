@@ -1,0 +1,161 @@
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text--dark;
+  font-family: $font-header;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 3.8rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00ace6), to(#007399));
+  background: linear-gradient(#58d0f9, #036282);
+  color: transparent;
+  -webkit-background-clip: text;
+
+  @include breakpoint($bp-medium-up) {
+    margin-bottom: 10px;
+  }
+}
+
+
+h2 {
+  @include font-size(21, 30);
+  font-weight: 300;
+
+  @include breakpoint($bp-medium-up) {
+    @include font-size(31, 40);
+  }
+}
+
+h3 {
+  @include font-size(21, 30);
+  color: #0074c1;
+  font-weight: 300;
+  margin-bottom: 5px;
+
+  @include breakpoint($bp-medium-up) {
+    @include font-size(24, 30);
+  }
+}
+
+h4 {
+  @include font-size(16, 22);
+
+  @include breakpoint($bp-medium-up) {
+    @include font-size(18, 24);
+  }
+}
+
+h5 {
+  @include font-size(16);
+}
+
+h6 {
+  @include font-size(16);
+}
+
+p {
+  @include font-size(16, 24);
+  margin: 0 0 20px;
+
+  @include breakpoint($bp-medium-up) {
+    @include font-size(18, 26);
+  }
+}
+
+// Ordered and unordered lists.
+ol,
+ul {
+
+  // Node content and CKEditor preview.
+  .paragraph-body__body &,
+  .cke_editable & {
+    @include font-size(16, 24);
+    margin: 0 0 20px;
+
+    @include breakpoint($bp-medium-up) {
+      @include font-size(18, 26);
+    }
+
+    li {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      position: relative;
+    }
+  }
+}
+
+// Unordered list.
+ul {
+
+  // Node content and CKEditor preview.
+  .node__content &,
+  .cke_editable & {
+    li {
+      list-style: none;
+
+      // List style.
+      &:before {
+        background-color: $brand--red;
+        border-radius: 100%;
+        content: "";
+        display: block;
+        height: 10px;
+        left: -20px;
+        position: absolute;
+        top: 7px;
+        width: 10px;
+      }
+    }
+  }
+}
+
+// Ordered list.
+ol {
+
+  // Node content and CKEditor preview.
+  .node__content &,
+  .cke_editable & {
+
+    // Letter rather than number.
+    .lettered {
+      list-style-type: lower-alpha;
+    }
+  }
+}
+
+// Blockquote.
+blockquote {
+  border: 2px solid #ccc;
+  margin: 20px 60px;
+  padding: 20px;
+}
+
+// Highlighted.
+highlighted {
+  color: #5e6367;
+  font-size: 1.5rem !important;
+  line-height: 35px;
+}
+
+// Horizontal rule.
+hr {
+  background: #ccc;
+  border: 0;
+  clear: both;
+  display: block;
+  height: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

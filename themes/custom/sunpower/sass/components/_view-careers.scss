@@ -1,0 +1,72 @@
+// =============================================================================
+// VIEW - CAREERS
+// =============================================================================
+
+.view-careers {
+
+  // Content.
+  .view-content {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 0 20px;
+      padding: 0;
+
+      // Remove dot.
+      &:before {
+        display: none;
+      }
+
+      // Last.
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    // Section title.
+    h3 {
+      @include font-size(32, 40);
+      border-bottom: 2px solid #f0f0f0;
+      color: $text--dark;
+      font-weight: 400;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  // Title.
+  &__title {
+    @include font-size(18);
+    font-weight: 400;
+    margin-bottom: 5px;
+
+    // Links.
+    a,
+    a:visited {
+      text-decoration: none;
+
+      // Hover and focus.
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Authored on.
+  &__authored-on {
+    @include font-size(14, 14);
+    color: #999;
+    font-style: italic;
+
+    &--label {
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// =============================================================================
+// HELPERS
+// =============================================================================
+
+// Clear.
+.clear {
+  clear: both;
+}
+
+// Clearfix.
+.clearfix {
+  @include clearfix;
+}
+
+// Float left.
+.float-left {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+// Float right.
+.float-right {
+  float: right;
+  margin: 0 0 20px 20px;
+}

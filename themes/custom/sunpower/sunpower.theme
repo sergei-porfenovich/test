@@ -1,0 +1,58 @@
+<?php
+
+use Drupal\paragraphs\Entity\Paragraph;
+
+function sunpower_preprocess_block(&$variables) {
+  $site_config = \Drupal::config('system.site');
+
+  // Logo and site name for display in mobile menu block.
+  $variables['logopath'] = '/' . drupal_get_path('theme', 'sunpower') . '/logo--white.svg';
+}
+
+function sunpower_preprocess_node(&$variables) {
+
+  // Convenience variables.
+  $node = $variables['node'];
+
+  // Empty paragraph variables for node.html.twig.
+  $paragraph_hero = [];
+
+  // Check content type.
+  if($node->getType() == 'page') {
+
+    $isHeroPresent = FALSE;
+
+    // Get $paragraph->bundle() types and assign variables if they exist.
+    if (!empty($node->field_components->getValue())) {
+      foreach ($node->field_components->getValue() as $key => $value) {
+        $paragraph = FALSE;
+        if (!empty($value['entity'])) {
+          $paragraph = $value['entity'];
+        }
+        elseif (!empty($value['target_id'])) {
+          $paragraph = Paragraph::load($value['target_id']);
+        }
+        
+        if (!empty($paragraph) && $paragraph instanceof Paragraph) {
+          $view_builder = \Drupal::entityManager()->getViewBuilder('paragraph');
+          $array = $view_builder->view($paragraph);
+          $array['#cache']['tags'][] = 'node:' . $node->id();
+          $paragraph_visible[] = $array;
+
+          // Check for "Hero" component.e
+          if ($paragraph->bundle() == 'hero') {
+            $paragraph_hero[] = $array;
+            $isHeroPresent = TRUE;
+          }
+        }
+      }
+
+      // if ($isHeroPresent == FALSE){
+      //   $variables['attributes']['class'] = array_merge($variables['attributes']['class'], ['secondary-page-content']);  
+      // }
+
+      // Populated variables.
+      $variables['paragraph_hero'] = $paragraph_hero;
+    }
+  }
+}

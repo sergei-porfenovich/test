@@ -1,0 +1,143 @@
+uuid: 3a0d97cb-d8c4-4848-86c8-a99c74098c9b
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: job_posting
+title: 'Job Posting'
+description: 'Form where users can post for open positions'
+category: ''
+elements: "position_name:\n  '#type': hidden\n  '#title': 'Position Name'\nstep1:\n  '#type': processed_text\n  '#wrapper_attributes':\n    class:\n      - form-job-posting__column\n  '#text': \"<p class=\\\"form-job-posting__step-number\\\">Step 1</p>\\n\\n<p class=\\\"form-job-posting__step-name\\\">Contact Information</p>\\n\\n<p class=\\\"form-job-posting__step-description\\\">Please add contact information</p>\\n\"\n  '#format': full_html\ncontact_info_container:\n  '#type': container\n  '#attributes':\n    class:\n      - form-job-posting__column\n  full_name:\n    '#type': textfield\n    '#title': 'Full Name'\n    '#title_display': invisible\n    '#placeholder': 'Full Name'\n    '#required': true\n    '#required_error': 'Full Name must be specified'\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n  e_mail:\n    '#type': email\n    '#title': e-Mail\n    '#title_display': invisible\n    '#placeholder': e-Mail\n    '#required': true\n    '#required_error': 'e-Mail value must be specified'\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n  phone:\n    '#type': tel\n    '#title': Phone\n    '#title_display': invisible\n    '#placeholder': Phone\n    '#required': true\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\nhorizontal_rule1:\n  '#type': webform_horizontal_rule\n  '#attributes':\n    class:\n      - form-job-posting__column-full\nstep2:\n  '#type': processed_text\n  '#wrapper_attributes':\n    class:\n      - form-job-posting__column\n  '#text': \"<p class=\\\"form-job-posting__step-number\\\">Step 2</p>\\n\\n<p class=\\\"form-job-posting__step-name\\\">Resume</p>\\n\\n<p class=\\\"form-job-posting__step-description\\\">Please attach your resume</p>\\n\"\n  '#format': full_html\nresume:\n  '#type': webform_document_file\n  '#title': Resume\n  '#title_display': invisible\n  '#description_display': invisible\n  '#required': true\n  '#wrapper_attributes':\n    class:\n      - 'form-job-posting__column form-job-posting__pull-left form-job-posting__field-top-margin'\n  '#file_extensions': 'rtf pdf doc docx ppt pptx'\nhorizontal_rule2:\n  '#type': webform_horizontal_rule\n  '#attributes':\n    class:\n      - form-job-posting__column-full\nstep3:\n  '#type': processed_text\n  '#wrapper_attributes':\n    class:\n      - form-job-posting__column\n  '#text': \"<p class=\\\"form-job-posting__step-number\\\">Step 3</p>\\n\\n<p class=\\\"form-job-posting__step-name\\\">Experience</p>\\n\\n<p class=\\\"form-job-posting__step-description\\\">Please add your work experience</p>\\n\"\n  '#format': full_html\nexperience_container:\n  '#type': container\n  '#attributes':\n    class:\n      - form-job-posting__column\n  experience_1_employer:\n    '#type': textfield\n    '#title': 'Experience 1 - Employer'\n    '#title_display': invisible\n    '#placeholder': 'Employer Name'\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n  experience_1_position:\n    '#type': textfield\n    '#title': 'Experience 1 - Position'\n    '#title_display': invisible\n    '#placeholder': Position\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n  experience_1_location:\n    '#type': textfield\n    '#title': 'Experience 1 - Location'\n    '#title_display': invisible\n    '#placeholder': Location\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n  experience_1_description:\n    '#type': textarea\n    '#title': 'Experience 1 - Description'\n    '#title_display': invisible\n    '#placeholder': Description\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n  experience_1_start_date:\n    '#type': datelist\n    '#title': 'Start Date'\n    '#title_display': inline\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n    '#date_part_order':\n      - year\n      - month\n    '#date_year_range': '1960:2018'\n    '#date_year_range_reverse': true\n  experience_1_end_date:\n    '#type': datelist\n    '#title': 'End Date'\n    '#title_display': inline\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n    '#date_part_order':\n      - year\n      - month\n    '#date_year_range': '1960:2018'\n    '#date_year_range_reverse': true\nhorizontal_rule3:\n  '#type': webform_horizontal_rule\n  '#attributes':\n    class:\n      - form-job-posting__column-full\nstep4:\n  '#type': processed_text\n  '#wrapper_attributes':\n    class:\n      - form-job-posting__column\n  '#text': \"<p class=\\\"form-job-posting__step-number\\\">Step 4</p>\\n\\n<p class=\\\"form-job-posting__step-name\\\">Skills</p>\\n\\n<p class=\\\"form-job-posting__step-description\\\">Please add your areas of expertise</p>\\n\"\n  '#format': full_html\nskills:\n  '#type': textarea\n  '#title': Skills\n  '#title_display': invisible\n  '#placeholder': 'Areas of Expertise'\n  '#wrapper_attributes':\n    class:\n      - 'form-job-posting__column form-job-posting__pull-left'\nhorizontal_rule4:\n  '#type': webform_horizontal_rule\n  '#attributes':\n    class:\n      - form-job-posting__column-full\nstep5:\n  '#type': processed_text\n  '#wrapper_attributes':\n    class:\n      - form-job-posting__column\n  '#text': \"<p class=\\\"form-job-posting__step-number\\\">Step 5</p>\\n\\n<p class=\\\"form-job-posting__step-name\\\">Education</p>\\n\\n<p class=\\\"form-job-posting__step-description\\\">Please add your highest education history</p>\\n\"\n  '#format': full_html\neducation_container:\n  '#type': container\n  '#attributes':\n    class:\n      - form-job-posting__column\n  education_1_name:\n    '#type': textfield\n    '#title': 'Education 1 - Name'\n    '#title_display': invisible\n    '#placeholder': 'University Name'\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n  education_1_concentration:\n    '#type': textfield\n    '#title': 'Education 1 - Concentration'\n    '#title_display': invisible\n    '#placeholder': Concentration\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\n  education_1_degree:\n    '#type': select\n    '#title': Degree\n    '#title_display': before\n    '#options':\n      'High School': 'High School'\n      Bachelors: Bachelors\n      Masters: Masters\n      PHD: PHD\n    '#wrapper_attributes':\n      class:\n        - form-job-posting__pull-left\nhorizontal_rule5:\n  '#type': webform_horizontal_rule\n  '#attributes':\n    class:\n      - form-job-posting__column-full\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#attributes':\n    class:\n      - form-job-posting__column-full\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_login: false
+  form_login_message: ''
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  submission_login: false
+  submission_login_message: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: url
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: /node/69
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

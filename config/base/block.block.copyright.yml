@@ -1,0 +1,25 @@
+uuid: 491b9ca1-2ac0-44ea-a227-4af1e72eebc2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d68f1bb1-5184-48bd-8708-f81e3687fa56'
+  module:
+    - block_content
+  theme:
+    - sunpower
+id: copyright
+theme: sunpower
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:d68f1bb1-5184-48bd-8708-f81e3687fa56'
+settings:
+  id: 'block_content:d68f1bb1-5184-48bd-8708-f81e3687fa56'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

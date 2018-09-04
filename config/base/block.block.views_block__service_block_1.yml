@@ -1,0 +1,30 @@
+uuid: 1beb16bb-245e-4fbd-aa49-3eb0e73d42eb
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.service
+  module:
+    - system
+    - views
+  theme:
+    - sunpower
+id: views_block__service_block_1
+theme: sunpower
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:service-block_1'
+settings:
+  id: 'views_block:service-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /services
+    negate: false
+    context_mapping: {  }

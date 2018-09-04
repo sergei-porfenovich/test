@@ -1,0 +1,130 @@
+// =============================================================================
+// VIEW - MEDIA
+// =============================================================================
+
+.view-media {
+  @include clearfix;
+
+  // Item.
+  .view-three-column__item {
+    border: 1px solid #cedde5;
+    border-radius: 3px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    padding-bottom: 40px;
+    position: relative;
+
+    // Last child.
+    &:last-child {
+      margin-bottom: 35px;
+    }
+  }
+
+  // Video.
+  &__video {
+    margin-bottom: 20px;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    // Video embed.
+    .video-embed-field-launch-modal {
+      position: relative;
+
+      // Arrow.
+      &:before {
+        @include center;
+        border-color: transparent transparent transparent $white;
+        border-style: solid;
+        border-width: 10px 0 10px 22px;
+        content: "";
+        height: 0;
+        margin-left: 3px;
+        width: 0;
+        z-index: 2;
+      }
+
+      // Circle.
+      &:after {
+        @include center;
+        background-color: rgba($black, .35);
+        border-radius: 50%;
+        border: 1px solid $white;
+        content: "";
+        cursor: pointer;
+        display: block;
+        height: 50px;
+        transition: background-color .3s ease;
+        width: 50px;
+      }
+
+      // Hover and focus.
+      &:hover,
+      &:focus {
+
+        // Circle.
+        &:after {
+          background-color: rgba($black, .75);
+        }
+      }
+    }
+  }
+
+  // Title.
+  &__title {
+    @include font-size(24);
+    padding: 0 20px;
+
+    // Links.
+    a,
+    a:visited {
+      text-decoration: none;
+
+      // Hover and focus.
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Description.
+  &__body {
+    margin-bottom: 20px;
+    padding: 0 20px;
+
+    p {
+      @include font-size(16);
+      margin-bottom: 0;
+    }
+  }
+
+  // ShareThis.
+  .sharethis-wrapper {
+    @include clearfix;
+    background: #f3f7f8;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    padding: 8px 20px;
+    width: 100%;
+
+    .st_sharethis {
+      float: right;
+
+      > span {
+        margin: 0 !important;
+      }
+    }
+
+    .st_fblike {
+      float: left;
+
+      > span {
+        margin: 0 !important;
+      }
+    }
+  }
+}

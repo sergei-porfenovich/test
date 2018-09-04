@@ -1,0 +1,21 @@
+uuid: 2ef350b5-4464-47a1-9250-50412bf64039
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_career_experience
+    - node.type.career
+  module:
+    - options
+id: node.career.field_career_experience
+field_name: field_career_experience
+entity_type: node
+bundle: career
+label: 'Career Experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

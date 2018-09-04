@@ -1,0 +1,133 @@
+// =============================================================================
+// BLOCK - SECONDARY LINKS
+// =============================================================================
+
+#block-secondarylinks {
+  @include font-size(10, 50);
+  font-weight: 700;
+  letter-spacing: tracking(110);
+  text-transform: uppercase;
+
+  @include breakpoint($bp-medium-up) {
+    float: right;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 10px 0 0;
+      padding: 0 0 0 30px;
+      position: relative;
+
+      @include breakpoint($bp-medium-up) {
+        margin-left: 32px;
+        margin-right: 0;
+
+        // First.
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+
+  // Icon.
+  i {
+    @include vertical-center;
+    border-radius: 50%;
+    border: 2px solid $white;
+    display: block;
+    font-size: 10px;
+    height: 22px;
+    left: 0;
+    line-height: 6px;
+    padding: 5px;
+    width: 22px;
+  }
+
+  // Links.
+  a,
+  a:visited {
+
+    // Hover and focus.
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+.block-secondarylinks {
+  // Not visible on phone mobiles
+  &__hidden-small-devices {
+    @include breakpoint($bp-small) {
+      display: none !important;
+    }
+  }
+}
+
+
+#block-secondarylinkslandingpage {
+  @include font-size(10, 50);
+  font-weight: 700;
+  letter-spacing: tracking(110);
+  text-transform: uppercase;
+
+  @include breakpoint($bp-medium-up) {
+    float: right;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 10px 0 0;
+      padding: 0 0 0 30px;
+      position: relative;
+
+      @include breakpoint($bp-medium-up) {
+        margin-left: 32px;
+        margin-right: 0;
+
+        // First.
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+
+  // Icon.
+  i {
+    @include vertical-center;
+    border-radius: 50%;
+    border: 2px solid $white;
+    display: block;
+    font-size: 10px;
+    height: 22px;
+    left: 0;
+    line-height: 6px;
+    padding: 5px;
+    width: 22px;
+  }
+
+  // Links.
+  a,
+  a:visited {
+
+    // Hover and focus.
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}

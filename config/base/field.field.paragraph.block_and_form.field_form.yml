@@ -1,0 +1,29 @@
+uuid: 1919bcad-6d91-48fa-ae4c-2c4122dbb1ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_form
+    - paragraphs.paragraphs_type.block_and_form
+  module:
+    - webform
+id: paragraph.block_and_form.field_form
+field_name: field_form
+entity_type: paragraph
+bundle: block_and_form
+label: Form
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  default_data: ''
+  status: open
+  open: ''
+  close: ''
+field_type: webform

@@ -1,0 +1,66 @@
+uuid: c01f977f-77e6-4a6e-946c-3671b1f9d751
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_body
+    - field.field.paragraph.hero.field_form
+    - field.field.paragraph.hero.field_image
+    - image.style.large
+    - paragraphs.paragraphs_type.hero
+  module:
+    - field_group
+    - focal_point
+    - text
+    - webform
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - field_form
+        - field_body
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: Content
+      region: content
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_body:
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_form:
+    weight: 3
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  field_image:
+    weight: 0
+    settings:
+      preview_image_style: large
+      preview_link: true
+      offsets: '50,50'
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_focal_point
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

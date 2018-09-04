@@ -1,0 +1,44 @@
+// =============================================================================
+// BUTTON
+// =============================================================================
+
+@mixin button {
+  @include font-size(17, 17);
+  background-color: $brand--orange;
+  border: 0;
+  border-bottom: 4px solid darken($brand--orange, 10%);
+  border-radius: 4px;
+  color: $white;
+  display: inline-block;
+  font-family: $opensans;
+  font-weight: 700;
+  margin-right: 10px;
+  padding: 17px 41px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  transition: all .3s ease;
+
+  // Hover and focus.
+  &:hover,
+  &:focus {
+    background-color: darken($brand--orange, 5%);
+    text-decoration: none;
+  }
+}
+
+// Secondary.
+@mixin button--secondary {
+  @include button;
+  background-color: $brand--blue;
+  border: 1px solid $brand--blue;
+  color: $white;
+
+  // Hover and focus.
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $brand--blue;
+  }
+}

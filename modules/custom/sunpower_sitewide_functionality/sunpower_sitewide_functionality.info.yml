@@ -1,0 +1,50 @@
+name: 'Sunpower Sitewide Functionality'
+description: 'Custom content types, components, image styles, and configuration.'
+type: module
+core: 8.x
+dependencies:
+  - blazy
+  - block
+  - block_content
+  - block_field
+  - ckeditor
+  - colorbox
+  - comment
+  - crop
+  - ctools
+  - datetime
+  - disqus
+  - editor
+  - entity_reference_revisions
+  - fences
+  - field
+  - field_group
+  - file
+  - filter
+  - focal_point
+  - image
+  - imageapi_optimize
+  - link
+  - media_entity
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - paragraphs
+  - path
+  - pathauto
+  - rdf
+  - responsive_image
+  - sharethis
+  - simple_gmap
+  - slick
+  - slick_paragraphs
+  - system
+  - taxonomy
+  - text
+  - user
+  - video_embed_field
+  - views
+  - webform
+version: 8.x-1.0
+package: SunPower

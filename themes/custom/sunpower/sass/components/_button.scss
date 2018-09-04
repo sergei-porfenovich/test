@@ -1,0 +1,14 @@
+// =============================================================================
+// BUTTON
+// =============================================================================
+
+.btn,
+.btn:visited {
+  @include button;
+}
+
+// Secondary.
+.btn--secondary,
+.btn--secondary:visited {
+  @include button--secondary;
+}

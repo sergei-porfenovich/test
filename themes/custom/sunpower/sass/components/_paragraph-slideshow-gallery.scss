@@ -1,0 +1,116 @@
+// =============================================================================
+// PARAGRAPH - SLIDESHOW GALLERY
+// =============================================================================
+
+.paragraph-slideshow-gallery {
+  position: relative;
+  text-align: center;
+
+  // Content.
+  &__content {
+    .inner {
+      background-color: #666;
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  // Slick.
+  .slick {
+
+    // Arrow wrapper.
+    &__arrow {
+      bottom: 80px;
+      position: absolute;
+      width: 100%;
+
+      // Arrows.
+      .slick-arrow {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: block;
+        height: 40px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        text-indent: -999em;
+        top: 0;
+        transition: all .3s ease;
+        width: 40px;
+
+        // Arrow.
+        &:before {
+          @include center;
+          color: $white;
+          font-family: $fa;
+          font-size: 20px;
+          text-indent: 0;
+
+          @include breakpoint($bp-large-up) {
+            font-size: 24px;
+          }
+        }
+
+        // Previous.
+        &.slick-prev {
+          left: 20px;
+
+          // Arrow.
+          &:before {
+            content: "\f053";
+            margin-left: -2px;
+          }
+        }
+
+        // Next.
+        &.slick-next {
+          right: 20px;
+
+          // Arrow.
+          &:before {
+            content: "\f054";
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+
+    // Slide.
+    .slide {
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    // Thumbnails.
+    &--thumbnail {
+      background-color: #3d3d3d;
+      padding-left: 80px;
+      padding-right: 80px;
+
+      // Slide.
+      .slide {
+        background-color: transparent;
+        cursor: pointer;
+        padding: 20px;
+        transition: background-color .3s ease;
+        width: auto !important;
+
+        // Current.
+        &.slick-current {
+          background-color: #acacac;
+        }
+
+        img {
+          border-radius: 3px;
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

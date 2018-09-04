@@ -1,0 +1,44 @@
+// =============================================================================
+// NODE
+// =============================================================================
+
+.node {
+
+  // Article.
+  &__article {
+    @include breakpoint($bp-medium-up) {
+      padding-top: 50px;
+    }
+
+    // With "Hero" component.
+    &.with-hero {
+      padding-top: 0;
+    }
+  }
+
+  // Meta.
+  &__meta {
+    @include font-size(14, 14);
+    color: #999;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  // Links.
+  .links {
+    li {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+// Title.
+.region-title {
+  padding-top: 20px;
+
+  @include breakpoint($bp-medium-up) {
+    padding-top: 70px;
+  }
+}

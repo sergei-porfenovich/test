@@ -1,0 +1,137 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<h2 class="view-interactive-map__title">Our Locations</h2>
+
+<div id="view-interactive-map">
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+<div id="mapstore" class="mapFrame">
+	<table>
+		<tr>
+			<td>
+				<div class="mapStoreStateFlag">
+				 	<span class="frameHelper"></span>
+					<img id="imgMapStoreStateFlag" class="imgStoreStateFlag" height=3></img>
+				</div>
+			</td>
+			<td>
+				<div class="mapStoreFrameText">
+					<div id="mapStoreName" class="mapStoreName"></div>
+					<div id="mapStoreAddress" class="mapStoreNameAddress"></div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div id="interactivemap" class="interactivemap"></div>
+
+<script>
+
+  	var map;						// Map that will be presented in the screen
+
+	// Function to present the map in the screen
+	function initMap() {
+
+		// Creates the Map, centering to USA
+		map = new google.maps.Map(document.getElementById('interactivemap'), {
+		  center: {lat: 30.0371485, lng: -97.886982},
+		  zoom: 8
+		});
+
+
+		var latitude;				// Latitude to place the maker of the store in the map
+		var longitude;				// Longitude to place the maker of the store in the map
+		var myLatLng;				// Variable use to place the maker with the Latitude and Longitude
+
+		 // For every store
+		{% for row in rows %}
+			{% set row_classes = [default_row_class ? 'views-row',] %}
+
+			// Sets the Latitude and Longitude of the store
+		 	latitude = {{ row['content']['#row']._entity.field_latitude_coordinate.value }};
+		 	longitude = {{ row['content']['#row']._entity.field_longitude_coordinate.value }};
+			myLatLng = {lat: latitude, lng: longitude};
+
+			// Places in the map the market of the store
+			var marker = new google.maps.Marker({
+			    position: myLatLng,
+			    map: map,
+			    title: '{{ row['content']['#row']._entity.title.value }}'
+			  });
+
+
+			// Function that will be executed when the user clicks in the marker
+	    	marker.addListener('click', function() {
+
+	          // Presents the Map Store Box and the details of the store
+	          document.getElementById("mapstore").style.visibility = "visible";
+	          document.getElementById("mapDetails").style.display = "block";
+
+	          // Presents the information of the Store Mini Box
+	          document.getElementById("mapStoreName").innerText = '{{ row['content']['#row']._entity.title.value }}';
+	          document.getElementById("mapStoreAddress").innerText = '{{ row['content']['#row']._entity.field_address.value }}, {{ row['content']['#row']._entity.field_city.value }} {{ row['content']['#row']._entity.field_postal_code.value }}';
+	          document.getElementById("imgMapStoreStateFlag").src = '{{ base_path ~ directory }}/images/flags/{{ row['content']['#row']._entity.field_state.value|lower }}.jpg';
+
+	          // Presents the infomation of the Store Address Section
+	          document.getElementById("detailsStoreAddressHeader").style.display = "block";
+			  document.getElementById("detailsStoreAddress").innerText = '{{ row['content']['#row']._entity.field_address.value }}, {{ row['content']['#row']._entity.field_city.value }} {{ row['content']['#row']._entity.field_postal_code.value }}';
+	          document.getElementById("detailsStoreState").innerText = '{{ row['content']['#row']._entity.field_state.value }}';
+
+	          // Presents the infomation of the Store Details Section
+	          document.getElementById("detailsStoreDetailsHeader").style.display = "block";
+			  document.getElementById("detailsStoreDetails").innerText = '{{ row['content']['#row']._entity.field_details.value }}';
+
+	          // Presents the infomation of the Store Image Section
+			  {% set photo = file_url(row['content']['#row']._entity.field_image.entity.fileuri) %}
+  			  document.getElementById("detailsStoreImage").src = '{{ photo }}';
+
+	        });
+
+		{% endfor %}
+	}
+</script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2u39WMMO1zdsOKgP45NaFssB868VkSJ0&callback=initMap"
+async defer></script>
+
+  <div id="mapDetails" class="mapDetails">
+    <div class="inner">
+      <div class="view-interactive-map__address">
+        <h3 id="detailsStoreAddressHeader" class="mapSection">Address</h3>
+        <div id="detailsStoreAddress" class="mapContent"></div>
+        <div id="detailsStoreState" class="mapContentState"></div>
+      </div>
+      <div class="view-interactive-map__details">
+        <h3 id="detailsStoreDetailsHeader" class="mapSection">Details</h3>
+        <div id="detailsStoreDetails" class="mapContent mapSectionDetailsContent"></div>
+      </div>
+      <div class="view-interactive-map__image">
+        <div class="mapContent">
+          <img id="detailsStoreImage" class="image-style mapStoreImage"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

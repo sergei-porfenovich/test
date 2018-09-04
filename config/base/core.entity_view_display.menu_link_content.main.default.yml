@@ -1,0 +1,54 @@
+uuid: 1fc27eb6-3caa-4ed4-a1be-d64ce7ad2327
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_description
+    - field.field.menu_link_content.main.field_image
+    - responsive_image.styles.menu_dropdown
+    - system.menu.main
+  module:
+    - fences
+    - responsive_image
+    - text
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: menu-dropdown__description
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_image:
+    weight: 2
+    label: hidden
+    settings:
+      responsive_image_style: menu_dropdown
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: menu-dropdown__image
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: responsive_image
+    region: content
+hidden: {  }

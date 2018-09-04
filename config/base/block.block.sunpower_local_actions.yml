@@ -1,0 +1,20 @@
+uuid: 7a54a6e9-0a11-4073-be1d-4e63d20b438d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sunpower
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: sunpower_local_actions
+theme: sunpower
+region: content
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

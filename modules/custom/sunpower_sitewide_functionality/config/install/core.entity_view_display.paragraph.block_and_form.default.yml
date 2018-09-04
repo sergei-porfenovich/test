@@ -1,0 +1,68 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_and_form.field_block_embed
+    - field.field.paragraph.block_and_form.field_form
+    - paragraphs.paragraphs_type.block_and_form
+  module:
+    - block_field
+    - fences
+    - field_group
+    - webform
+third_party_settings:
+  field_group:
+    group_inner:
+      children:
+        - field_block_embed
+        - field_form
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Inner
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: inner
+      label: Inner
+      region: content
+id: paragraph.block_and_form.default
+targetEntityType: paragraph
+bundle: block_and_form
+mode: default
+content:
+  field_block_embed:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: paragraph-two-column__first
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: block_field
+    region: content
+  field_form:
+    weight: 2
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: paragraph-two-column__last
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }

@@ -1,0 +1,25 @@
+sunpower.group1.small:
+  label: small
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+  group: SunPower
+sunpower.group1.medium:
+  label: medium
+  mediaQuery: '(min-width: 720px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+  group: SunPower
+
+sunpower.group1.large:
+  label: large
+  mediaQuery: '(min-width: 1020px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: SunPower

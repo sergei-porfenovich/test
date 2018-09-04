@@ -1,0 +1,26 @@
+uuid: e1e1b585-0b72-449f-a178-160256825ac6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_embed.field_block_embed
+    - paragraphs.paragraphs_type.block_embed
+  module:
+    - block_field
+id: paragraph.block_embed.default
+targetEntityType: paragraph
+bundle: block_embed
+mode: default
+content:
+  field_block_embed:
+    weight: 0
+    settings:
+      plugin_id: ''
+      settings: {  }
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

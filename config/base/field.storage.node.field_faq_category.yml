@@ -1,0 +1,39 @@
+uuid: e1ac9bb3-7f78-47b3-bee3-dc6926e7c712
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_faq_category
+field_name: field_faq_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '01-SunPower Products'
+      label: '01-SunPower Products'
+    -
+      value: '02-Solar Technology'
+      label: '02-Solar Technology'
+    -
+      value: '03-How To Buy'
+      label: '03-How To Buy'
+    -
+      value: '04-Installation Process'
+      label: '04-Installation Process'
+    -
+      value: '05-Financial Options'
+      label: '05-Financial Options'
+    -
+      value: '06-Help & Support'
+      label: '06-Help & Support'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

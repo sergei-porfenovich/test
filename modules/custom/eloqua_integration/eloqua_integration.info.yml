@@ -1,0 +1,7 @@
+name: Eloqua integration
+description: Eloqua integration
+core: 8.x
+package: Eloqua
+dependencies:
+- webform:webform
+type: module

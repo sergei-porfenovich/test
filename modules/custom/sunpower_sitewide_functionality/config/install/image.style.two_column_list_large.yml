@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: two_column_list_large
+label: 'Two Column List Large'
+effects:
+  6c721559-d053-4a2e-84d0-7c20cd105738:
+    uuid: 6c721559-d053-4a2e-84d0-7c20cd105738
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 670
+      height: 500
+      crop_type: focal_point
+pipeline: __default__

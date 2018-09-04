@@ -1,0 +1,29 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.contact_map
+  module:
+    - system
+    - views
+  theme:
+    - sunpower
+id: views_block__contact_map_block_1
+theme: sunpower
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:contact_map-block_1'
+settings:
+  id: 'views_block:contact_map-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /contacts
+    negate: false
+    context_mapping: {  }

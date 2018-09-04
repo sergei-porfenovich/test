@@ -1,0 +1,50 @@
+// =============================================================================
+// VIEW PRODUCT
+// =============================================================================
+
+.view-product {
+
+  &__product-item {
+    background-color: #f3f7f8;
+    margin-bottom: 20px;
+
+    @include breakpoint($bp-large-up) {
+      align-items: center;
+      display: flex;
+      margin-bottom: 40px;
+      padding-bottom: 0;
+    }
+
+    // Last.
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    // Odd.
+    &:nth-child(odd) {
+      @include breakpoint($bp-large-up) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__product-column {
+    @include breakpoint($bp-large-up) {
+      width: 50%;
+    }
+
+    // Content.
+    &-content {
+      padding: 20px;
+    }
+  }
+  
+  &__product-image {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

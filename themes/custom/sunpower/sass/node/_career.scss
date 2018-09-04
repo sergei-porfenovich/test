@@ -1,0 +1,61 @@
+// =============================================================================
+// NODE - CAREERS
+// =============================================================================
+
+.node-career {
+
+  // Header.
+  &__header {
+    background-color: #f3f7f8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  // Submitted Icon.
+  &__submitted-icon {
+    margin-right: 10px;
+  }
+
+  // Header Field
+  &__header-field {
+    margin-top: 10px;
+  }
+
+  // Header Field Title
+  &__header-field-title {
+    font-weight: bold;
+  }
+
+  // Detail.
+  &__detail {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  // Detail Section.
+  &__detail-section {
+    @include font-size(24, 24);
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  // Detail Text.
+  &__detail-text {
+    @include font-size(18, 18);
+    line-height: 1.5;
+  }
+
+  // Apply Button
+  &__apply-button {
+    float: right;
+    clear: left;
+  }
+
+}
+

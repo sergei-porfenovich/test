@@ -1,0 +1,67 @@
+// =============================================================================
+// FORM - JOB POSTING
+// =============================================================================
+
+.form-job-posting {
+
+  &__column {
+    clear: right;
+    float: left;
+
+    @include breakpoint($bp-small-up) {
+      width: span(12);
+    }
+
+    @include breakpoint($bp-medium-up) {
+      width: span(6);
+    }
+  }
+
+  &__column-full {
+    clear: right;
+    float: left;
+
+    @include breakpoint($bp-large-up) {
+      width: span(12);
+    }
+  }
+
+  &__step-label {
+    @include font-size(12, 12);
+    color: #999;
+    line-height: 80%;
+  }
+
+  &__step-number {
+    @include font-size(12, 12);
+    margin-top: 20px;
+    color: #999;
+    text-align: left;
+    line-height: 80%;
+  }
+
+  &__step-name {
+    color: #2e5cb8;
+    font-weight: bold;
+    text-align: left;
+    line-height: 60%;
+
+    @include breakpoint($bp-small-up) {
+      @include font-size(32, 36);
+    }
+  }
+
+  &__step-description {
+    @include font-size(14, 14);
+    text-align: left;
+    line-height: 50%;
+  }
+
+  &__pull-left {
+    text-align: left;
+  }
+
+  &__field-top-margin {
+    margin-top: 20px;
+  }
+}

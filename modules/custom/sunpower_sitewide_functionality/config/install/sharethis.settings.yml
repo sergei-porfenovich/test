@@ -1,0 +1,112 @@
+button_option: stbc_
+comments: 0
+late_load: 0
+location: content
+node_types:
+  article: article
+  career: null
+  employee: null
+  faq: null
+  landing_page: null
+  media: null
+  page: null
+  portfolio_item: null
+  service: null
+  store: null
+  webform: null
+option_extras:
+  'Facebook Like:fblike': 'Facebook Like:fblike'
+  'Google Plus One:plusone': '0'
+option_neworzero: 0
+option_onhover: 1
+option_shorten: 1
+service_option: '''ShareThis:sharethis'''
+twitter_handle: ''
+twitter_recommends: ''
+twitter_suffix: ''
+webform_options: ''
+weight: 10
+widget_option: st_multi
+cns:
+  donotcopy: null
+  hashaddress: null
+sharethisnodes:
+  article:
+    full: full
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  page:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  career:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  employee:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  faq:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  media:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  portfolio_item:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  service:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  store:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  webform:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  landing_page:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+publisherID: dr-3382fa7d-bcb9-681e-7e57-72a82ee3433b
+callesi: '0'

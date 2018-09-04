@@ -1,0 +1,105 @@
+uuid: de1be67d-99e0-439d-94a5-7051471c5e43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_body
+    - field.field.paragraph.hero.field_form
+    - field.field.paragraph.hero.field_image
+    - paragraphs.paragraphs_type.hero
+    - responsive_image.styles.hero
+  module:
+    - fences
+    - field_group
+    - responsive_image
+    - text
+    - webform
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - group_content_inner
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: paragraph-hero__content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
+      region: content
+    group_content_inner:
+      children:
+        - field_body
+        - field_form
+      parent_name: group_content
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: 'Content inner'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: inner
+      label: 'Content inner'
+      region: content
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_body:
+    weight: 23
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: paragraph-hero__body
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_form:
+    weight: 24
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: paragraph-hero__form
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: webform_entity_reference_entity_view
+    region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: hero
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: paragraph-hero__image
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: responsive_image
+    region: content
+hidden: {  }

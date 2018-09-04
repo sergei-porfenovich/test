@@ -1,0 +1,30 @@
+uuid: 947dd9bb-9e66-4788-b05f-9c699c11c019
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - sunpower
+id: pagetitle
+theme: sunpower
+region: title
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      career: career
+      employee: employee
+      service: service
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

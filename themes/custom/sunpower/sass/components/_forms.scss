@@ -1,0 +1,77 @@
+// =============================================================================
+// FORMS
+// =============================================================================
+
+// Label.
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+// Submit.
+.form-submit {
+  @include button;
+}
+
+// Text input.
+.form-text,
+.form-email,
+.form-tel,
+textarea,
+select {
+  background-color: #f6f6f6;
+  border: 2px solid #ecedee;
+  border-radius: 4px;
+  max-width: 100%;
+  padding: 10px 15px;
+  transition: background-color .3s ease;
+
+  // Focus.
+  &:focus {
+    background-color: $white;
+  }
+}
+
+// Form item.
+.form-item {
+  margin: 0 0 20px;
+
+  // Last.
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+fieldset {
+  border: 2px solid #ccc;
+  min-width: auto;
+  padding: 20px;
+
+  .fieldset-legend {
+    background-color: $white;
+    display: block;
+    font-weight: 600;
+    margin-left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+  }
+
+  fieldset {
+    border-width: 1px;
+  }
+}
+
+form {
+
+  // Description.
+  .description {
+    margin-top: 5px;
+  }
+}
+
+// Messages.
+.messages {
+  margin-bottom: 20px;
+}

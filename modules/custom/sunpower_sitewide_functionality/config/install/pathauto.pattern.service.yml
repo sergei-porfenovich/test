@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: service
+label: Service
+type: 'canonical_entities:node'
+pattern: 'service/[node:title]'
+selection_criteria:
+  0ff2e19a-a6c2-411b-a2e5-a62e71549cdf:
+    id: node_type
+    bundles:
+      service: service
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0ff2e19a-a6c2-411b-a2e5-a62e71549cdf
+selection_logic: and
+weight: -5
+relationships: {  }

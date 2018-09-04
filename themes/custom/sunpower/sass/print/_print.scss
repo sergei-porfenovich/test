@@ -1,0 +1,68 @@
+// =============================================================================
+// PRINT
+// =============================================================================
+
+@media print {
+
+  html {
+    background-color: transparent !important;
+  }
+
+  // Underline all links.
+  a:link,
+  a:visited {
+    color: $brand--blue !important;
+    text-decoration: underline !important;
+  }
+
+  // Un-float the content.
+  .main {
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+
+    // Add visible URL after links.
+    a[href]:after {
+      content: " (" attr(href) ")";
+      font-weight: normal;
+      font-size: $base-font-size;
+    }
+
+    // Only display useful links.
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+      content: "";
+    }
+
+    // Add visible title after abbreviations.
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+  }
+
+  // Turn off any background colors or images.
+  body,
+  .main {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: $black !important;
+  }
+
+  .page-container {
+    max-width: none !important;
+  }
+
+  h1 {
+    color: $black !important;
+  }
+
+  /* Hide sidebars and nav elements. */
+  #skip-link,
+  header,
+  .region-sidebar-first,
+  .footer {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}

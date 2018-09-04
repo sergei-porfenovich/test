@@ -1,0 +1,125 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.career.body
+    - field.field.node.career.field_basic_qualification
+    - field.field.node.career.field_career_department
+    - field.field.node.career.field_career_experience
+    - field.field.node.career.field_career_type
+    - field.field.node.career.field_deadline_date
+    - field.field.node.career.field_preferred_qualification
+    - field.field.node.career.field_responsability
+    - node.type.career
+  module:
+    - datetime
+    - fences
+    - options
+    - text
+    - user
+id: node.career.default
+targetEntityType: node
+bundle: career
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_basic_qualification:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: dd
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_career_department:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+  field_career_experience:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_career_type:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_deadline_date:
+    weight: 3
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_preferred_qualification:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: string
+    region: content
+  field_responsability:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: ul
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    type: string
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

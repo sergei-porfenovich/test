@@ -1,0 +1,21 @@
+uuid: 6f613cbb-c083-49b0-897d-684e8389e993
+langcode: en
+status: true
+dependencies: {  }
+name: compress_images
+label: 'Compress images'
+processors:
+  7493a367-cbed-4f89-9045-6f5bb453b98a:
+    uuid: 7493a367-cbed-4f89-9045-6f5bb453b98a
+    id: optipng
+    weight: '1'
+    data:
+      manual_executable_path: /usr/bin/optipng
+      level: '5'
+      interlace: ''
+  418d8583-b6fa-458b-a711-5ef29b2c88ea:
+    uuid: 418d8583-b6fa-458b-a711-5ef29b2c88ea
+    id: resmushit
+    weight: 2
+    data:
+      quality: '75'

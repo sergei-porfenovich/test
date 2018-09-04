@@ -1,0 +1,9 @@
+services:
+  plugin.manager.imageapi_optimize.processor:
+    class: Drupal\imageapi_optimize\ImageAPIOptimizeProcessorManager
+    parent: default_plugin_manager
+  imageapi_optimize.hooks:
+    class: Drupal\imageapi_optimize\ImageAPIOptimizeHookImplementations
+    arguments: ['@string_translation']
+  imageapi_optimize.shell_operations:
+    class: Drupal\imageapi_optimize\ShellOperations

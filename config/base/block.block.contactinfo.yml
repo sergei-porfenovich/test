@@ -1,0 +1,33 @@
+uuid: 32f5e6de-b9f4-4f2f-99d2-033f69fe3dc5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a75caaa1-c197-4a7e-b725-99d87cc02f91'
+  module:
+    - block_content
+    - ctools
+  theme:
+    - sunpower
+id: contactinfo
+theme: sunpower
+region: footer_top
+weight: -7
+provider: null
+plugin: 'block_content:a75caaa1-c197-4a7e-b725-99d87cc02f91'
+settings:
+  id: 'block_content:a75caaa1-c197-4a7e-b725-99d87cc02f91'
+  label: 'Contact info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

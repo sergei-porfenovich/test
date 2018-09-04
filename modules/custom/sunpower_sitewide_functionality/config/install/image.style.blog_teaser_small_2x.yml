@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: blog_teaser_small_2x
+label: 'Blog Teaser Small 2x'
+effects:
+  69cab271-9194-4a95-960e-837aa20b6790:
+    uuid: 69cab271-9194-4a95-960e-837aa20b6790
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1360
+      height: 766
+      crop_type: focal_point
+pipeline: __default__

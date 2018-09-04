@@ -1,0 +1,29 @@
+uuid: ade348fc-69cc-41be-8022-1b72487ebd66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_career_department
+    - node.type.career
+    - taxonomy.vocabulary.job_department
+id: node.career.field_career_department
+field_name: field_career_department
+entity_type: node
+bundle: career
+label: Department
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      job_department: job_department
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

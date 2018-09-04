@@ -1,0 +1,41 @@
+uuid: 63086c65-35e1-4da5-a314-7f09c2148bbb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:form_block:8a2c7c84-fab0-4d25-874e-63944f42722d'
+  module:
+    - block_content
+    - ctools
+    - node
+  theme:
+    - sunpower
+id: careerjobposting
+theme: sunpower
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:8a2c7c84-fab0-4d25-874e-63944f42722d'
+settings:
+  id: 'block_content:8a2c7c84-fab0-4d25-874e-63944f42722d'
+  label: 'Career Job Posting'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      career: career
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      career: career
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

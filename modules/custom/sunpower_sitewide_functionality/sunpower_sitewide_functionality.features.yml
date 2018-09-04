@@ -1,0 +1,5 @@
+bundle: sunpower
+excluded:
+  - filter.format.plain_text
+  - filter.format.restricted_html
+required: true

@@ -1,0 +1,73 @@
+// =============================================================================
+// VIEW - SERVICE
+// =============================================================================
+
+.view-service {
+  @include inner;
+
+  // Item.
+  &__item {
+    @include breakpoint($bp-large-up) {
+      align-items: center;
+      display: flex;
+      padding-bottom: 0;
+    }
+
+    // Last.
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    // Odd.
+    &:nth-child(odd) {
+      @include breakpoint($bp-large-up) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  // Column.
+  &__column {
+    @include breakpoint($bp-large-up) {
+      width: 50%;
+    }
+
+    // Content.
+    &-content {
+      padding-bottom: 20px;
+      padding-top: 20px;
+
+      @include breakpoint($bp-large-up) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+
+  // Title.
+  &__title {
+    text-transform: uppercase;
+
+    // Links.
+    a,
+    a:visited {
+      text-decoration: none;
+
+      // Hover and focus.
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Image.
+  &__image {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

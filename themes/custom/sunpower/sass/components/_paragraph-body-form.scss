@@ -1,0 +1,42 @@
+// =============================================================================
+// PARAGRAPH - BODY AND FORM
+// =============================================================================
+
+.paragraph-body-and-form {
+  background-color: #f3f7f8;
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  .inner {
+    @include breakpoint($bp-large-up) {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  .field--name-field-body {
+    @include breakpoint($bp-large-up) {
+      padding-right: 40px;
+      width: 50%;
+    }
+  }
+
+  .field--type-webform {
+    @include breakpoint($bp-large-up) {
+      padding-left: 40px;
+      width: 50%;
+    }
+
+    .webform-submission-quote-form {
+      max-width: none;
+      width: 100%;
+
+      .form-item {
+        input {
+          background-color: $white;
+          border: 1px solid #ccc;
+        }
+      }
+    }
+  }
+}

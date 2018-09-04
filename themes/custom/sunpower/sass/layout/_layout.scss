@@ -1,0 +1,77 @@
+// =============================================================================
+// LAYOUT
+// =============================================================================
+
+.inner,
+.page-container {
+  @include inner;
+}
+
+// Sidebar first.
+.sidebar-first {
+  @include breakpoint($bp-medium-up) {
+
+    // Main.
+    .main {
+      float: right;
+      width: span(6);
+    }
+
+    // Sidebar first.
+    .region-sidebar-first {
+      float: left;
+      width: span(2);
+      padding-top: 25px;
+    }
+  }
+}
+
+// Container.
+.layout-container {
+  @include inner;
+
+  // Page.
+  body.page-node-type-page & {
+    @include inner-reset;
+  }
+
+  // User pages.
+  body.path-user & {
+    padding-bottom: 40px;
+
+    @include breakpoint($bp-medium-up) {
+      padding-top: 130px;
+    }
+  }
+}
+
+// Secondary Page
+.secondary-page-content {
+  margin-top: 60px;
+  margin-bottom: 0px !important;
+}
+
+// Highlighted.
+.highlighted {
+  color: #5e6367;
+  font-size: 1rem !important;
+  line-height: 35px;
+}
+
+// Mobile Secondary Text
+.mobile-secondary-text {
+  @include breakpoint($bp-small) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @include breakpoint($bp-medium) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  @include breakpoint($bp-large-up) {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}

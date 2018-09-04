@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_embed
+    - paragraphs.paragraphs_type.block_embed
+  module:
+    - block_field
+id: paragraph.block_embed.field_block_embed
+field_name: field_block_embed
+entity_type: paragraph
+bundle: block_embed
+label: 'Block embed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  plugin_ids: {  }
+field_type: block_field

@@ -1,0 +1,101 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div id="view-interactive-map" class="inner">
+	{% set x = 1 %}
+	{% set column_side = 'left' %}
+	{% set column_number = 1 %}
+
+	{% for row in rows %}
+		<div class="view-contact-map__store-contact view-contact-map__store-contact-{{ column_side }}">
+
+
+			<img class="view-contact-map__store-separator view-contact-map__store-image" src = "{{ file_url(row['content']['#row']._entity.field_image.entity.fileuri)}}"></img>
+
+			<div class="view-contact-map__store-separator view-contact-map__address-content">
+				<p class="view-contact-map__store-state">{{ row['content']['#row']._entity.field_city.value }}</p>
+				<p class="view-contact-map__store-address">{{ row['content']['#row']._entity.field_address.value|upper }}</p>
+
+				<p class="view-contact-map__store-address">{{ row['content']['#row']._entity.field_city.value|upper }}, {{ row['content']['#row']._entity.field_postal_code.value }}</p>
+
+				<p class="view-contact-map__store-address view-contact-map__store-contact-info"><i class="fa fa-phone"></i>&nbsp;&nbsp;{{ row['content']['#row']._entity.field_phone_number.value }}</p>
+				<p class="view-contact-map__store-address"><i class="fa fa-envelope"></i>&nbsp;&nbsp;{{ row['content']['#row']._entity.field_email.value }}</p>
+			</div>
+
+			<div id="interactivemap{{ x }}" class="interactivemap view-contact-map__store-interactive-map view-contact-map__store-separator"></div>
+		</div>
+
+  		{% set x = x + 1 %}
+
+		{% if column_number == 1 %}
+		    {% set column_side = 'left' %}
+		    {% set column_number = 2 %}
+		{% elseif column_number == 2 %}
+		    {% set column_side = 'left' %}
+		    {% set column_number = 3 %}		
+		{% else %}
+		   	{% set column_side = 'left' %}
+		   	{% set column_number = 1 %}
+		{% endif %}
+
+	{% endfor %}
+</div>
+
+{% set x = 1 %}
+
+
+<script>
+
+	// Function to present the map in the screen
+	function initMap() {
+
+		{% for row in rows %}
+
+		  	var map{{ x }};						// Map that will be presented in the screen
+
+			var latitude{{ x }};				// Latitude to place the maker of the store in the map
+			var longitude{{ x }};				// Longitude to place the maker of the store in the map
+			var myLatLng{{ x }};				// Variable use to place the maker with the Latitude and Longitude
+
+			// Sets the Latitude and Longitude of the store
+		 	latitude{{ x }} = {{ row['content']['#row']._entity.field_latitude_coordinate.value }};
+		 	longitude{{ x }} = {{ row['content']['#row']._entity.field_longitude_coordinate.value }};
+			myLatLng{{ x }} = {lat: latitude{{ x }}, lng: longitude{{ x }}};
+
+			// Creates the Map, centering to USA
+			map{{ x }} = new google.maps.Map(document.getElementById('interactivemap{{ x }}'), {
+			  center: {lat: latitude{{ x }}, lng: longitude{{ x }}},
+			  zoom: 14
+			});
+
+			// Places in the map the market of the store
+			var marker{{ x }} = new google.maps.Marker({
+			    position: myLatLng{{ x }},
+			    map: map{{ x }},
+			    title: '{{ row['content']['#row']._entity.title.value }}'
+			});
+
+			{% set x = x + 1 %}
+
+		{% endfor %}
+	} 
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2u39WMMO1zdsOKgP45NaFssB868VkSJ0&callback=initMap" async defer></script>

@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.service.body
+    - field.field.node.service.field_image
+    - node.type.service
+    - responsive_image.styles.two_column_list
+  module:
+    - fences
+    - responsive_image
+    - text
+    - user
+id: node.service.default
+targetEntityType: node
+bundle: service
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: node-service__body
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: two_column_list
+      image_link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: node-service__image
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: responsive_image
+    region: content
+  sharethis:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

@@ -1,0 +1,7 @@
+uuid: a9e51de4-9446-459b-a442-f05d5b709b53
+langcode: en
+status: true
+dependencies: {  }
+name: hero_small_2x
+label: 'Hero small 2x'
+effects: {  }

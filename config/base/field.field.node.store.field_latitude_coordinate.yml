@@ -1,0 +1,19 @@
+uuid: 8f09d00b-04f6-4c8a-b11c-e8369857a930
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_latitude_coordinate
+    - node.type.store
+id: node.store.field_latitude_coordinate
+field_name: field_latitude_coordinate
+entity_type: node
+bundle: store
+label: 'Latitude Coordinate'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

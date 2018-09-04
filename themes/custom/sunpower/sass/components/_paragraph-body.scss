@@ -1,0 +1,14 @@
+// =============================================================================
+// PARAGRAPH - BODY
+// =============================================================================
+
+.paragraph-body {
+  @include inner;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  // Remove last bottom margin.
+  *:last-child {
+    margin-bottom: 0;
+  }
+}

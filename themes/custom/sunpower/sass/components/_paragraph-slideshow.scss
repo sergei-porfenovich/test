@@ -1,0 +1,226 @@
+// =============================================================================
+// PARAGRAPH - SLIDESHOW
+// =============================================================================
+
+.paragraph-slideshow {
+  position: relative;
+  text-align: center;
+
+
+  // Content.
+  &__content {
+    color: $white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint($bp-large-up) {
+      height: 100%;
+      padding-bottom: 0;
+      padding-top: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .inner {
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  // Body.
+  &__body {
+    background-color: rgba($black, .35);
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 20px;
+
+    @include breakpoint($bp-large-up) {
+      @include vertical-center;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 480px;
+      padding-left: 40px;
+      padding-right: 40px;
+      right: 90px;
+      text-align: left;
+    }
+
+    @include breakpoint(1500px) {
+      right: 0;
+    }
+
+    h1,
+    h2 {
+      @include font-size(24, 24);
+      color: $white;
+      font-weight: 400;
+      margin-bottom: 20px;
+      letter-spacing: tracking(-10);
+
+      @include breakpoint($bp-medium-up) {
+        @include font-size(38, 46);
+      }
+    }
+
+    p {
+      @include breakpoint($bp-large-up) {
+        @include font-size(22);
+      }
+
+      // Last.
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Image.
+  &__image {
+    img {
+      @include horizontal-center;
+      display: block;
+      height: 420px;
+      max-width: none;
+      top: 0;
+      width: auto;
+
+      @include breakpoint($bp-medium-up) {
+        height: auto;
+        width: 100%;
+      }
+
+      @include breakpoint($bp-large-up) {
+        position: relative;
+      }
+    }
+  }
+
+  // Slick.
+  .slick {
+
+    // Dots.
+    &-dots {
+      margin: 20px 0 0;
+      padding: 0;
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+      left: 0;
+
+      @include breakpoint($bp-large-up) {
+        bottom: 20px;
+        margin-top: 40px;
+      }
+
+      li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 10px;
+        padding: 0;
+        vertical-align: middle;
+
+        // Active.
+        &.slick-active {
+
+          // Dot.
+          button {
+            background-color: $white;
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+
+      // Dot.
+      button {
+        background-color: #a6a7a8;
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        display: block;
+        height: 10px;
+        line-height: 20px;
+        overflow: hidden;
+        padding: 0;
+        text-indent: -999em;
+        transition: all .3s ease;
+        width: 10px;
+      }
+    }
+
+    // Arrows.
+    .slick-arrow {
+      background-color: rgba($black, .35);
+      border: 0;
+      cursor: pointer;
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      text-indent: -999em;
+      top: 0;
+      transition: all .3s ease;
+      width: 35px;
+
+      @include breakpoint($bp-large-up) {
+        width: 70px;
+      }
+
+      // Hover and focus.
+      &:hover,
+      &:focus {
+        background-color: rgba($black, .65);
+      }
+
+      // Arrow.
+      &:after {
+        @include center;
+        color: $white;
+        font-family: $fa;
+        font-size: 20px;
+        text-indent: 0;
+
+        @include breakpoint($bp-large-up) {
+          font-size: 24px;
+        }
+      }
+
+      &.slick-prev {
+        border-right: 1px solid $white;
+        left: 0;
+
+        &:after {
+          content: "\f053";
+          margin-left: -4px;
+        }
+      }
+
+      &.slick-next {
+        border-left: 1px solid $white;
+        right: 0;
+
+        &:after {
+          content: "\f054";
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}
+
+// Slideshow item.
+.slideshow-item {
+  overflow: hidden;
+  text-shadow: 0 3px 7px rgba($black, .15);
+  text-align: center;
+
+  @include breakpoint($bp-large-up) {
+    max-height: 420px;
+    overflow: hidden;
+    position: relative;
+  }
+}

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: blog_node_small
+label: 'Blog Node Small'
+effects:
+  bde58026-3a0e-4832-bdf3-0a59bbdca53c:
+    uuid: bde58026-3a0e-4832-bdf3-0a59bbdca53c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 680
+      height: 320
+      crop_type: focal_point
+pipeline: __default__

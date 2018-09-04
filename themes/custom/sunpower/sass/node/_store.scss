@@ -1,0 +1,83 @@
+// =============================================================================
+// NODE - STORE
+// =============================================================================
+
+.node--type-store {
+
+  // Content.
+  .node__content {
+    padding-top: 50px;
+  }
+
+  // Column first.
+  &__column-first {
+    margin-bottom: 20px;
+
+    @include breakpoint($bp-medium-up) {
+      float: right;
+      margin-bottom: 0;
+      width: span(8);
+    }
+  }
+
+  // Column last.
+  &__column-last {
+    @include breakpoint($bp-medium-up) {
+      @include font-size(20, 30);
+      float: left;
+      font-weight: 400;
+      width: span(4);
+    }
+  }
+
+  // Image.
+  &__image {
+    margin-bottom: 45px;
+  }
+
+  // Title.
+  &__title {
+    @include font-size(30, 40);
+    color: #1f3d7a;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  // Address.
+  &__address {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  // Phone.
+  &__phone {
+    margin-bottom: 20px;
+
+    // Icon.
+    i {
+      margin-right: 7px;
+    }
+  }
+
+  // Email.
+  &__email {
+    margin-bottom: 55px;
+
+    // Icon.
+    i {
+      margin-right: 7px;
+    }
+
+    // Links.
+    a,
+    a:visited {
+      text-decoration: none;
+
+      // Hover and focus.
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}

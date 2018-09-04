@@ -1,0 +1,27 @@
+uuid: 6a253474-8bab-48c6-be7a-f953f6954910
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_career_type
+field_name: field_career_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Full Time'
+      label: 'Full Time'
+    -
+      value: 'Part Time'
+      label: 'Part Time'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

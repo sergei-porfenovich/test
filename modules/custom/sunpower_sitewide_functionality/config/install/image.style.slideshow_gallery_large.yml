@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: slideshow_gallery_large
+label: 'Slideshow Gallery Large'
+effects:
+  5097e575-805c-4433-a808-f2a63d68e253:
+    uuid: 5097e575-805c-4433-a808-f2a63d68e253
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 980
+      height: 580
+      crop_type: focal_point
+pipeline: __default__

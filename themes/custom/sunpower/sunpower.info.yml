@@ -1,0 +1,29 @@
+name: SunPower
+type: theme
+description: This is a sub theme of Classy
+core: 8.x
+# Defines the base theme
+base theme: classy
+# Defines libraries group in which we can add css/js.
+libraries:
+  - sunpower/global-styling
+# CKEditor.
+ckeditor_stylesheets:
+  - css/ckeditor-styles.css
+# Regions
+regions:
+  header_top: Header top
+  header: Header
+  breadcrumb: Breadcrumb
+  title: Title
+  help: Help
+  content: Content
+  footer_top: Footer top
+  footer: Footer
+  Hidden: Hidden (For Paragraphs)
+  bottom: Page bottom
+  # The page_top and page_bottom regions are hidden, which means they will not
+  # show up on the block layout page. But they are required in order for the
+  # html.html.twig to work properly, so do not delete them.
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

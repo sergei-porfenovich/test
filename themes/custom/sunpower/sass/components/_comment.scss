@@ -1,0 +1,32 @@
+// =============================================================================
+// COMMENT
+// =============================================================================
+
+.comment {
+  border: 2px solid #ecedee;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+
+  // Form.
+  &-form {
+
+    // Form actions.
+    .form-actions {
+      .button {
+        padding: 10px 20px;
+      }
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    // Filter.
+    .filter-wrapper {
+      display: none;
+    }
+  }
+}

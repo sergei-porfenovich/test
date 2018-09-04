@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.form.field_form
+    - paragraphs.paragraphs_type.form
+  module:
+    - fences
+    - webform
+id: paragraph.form.default
+targetEntityType: paragraph
+bundle: form
+mode: default
+content:
+  field_form:
+    weight: 0
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: paragraph-form__form
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }

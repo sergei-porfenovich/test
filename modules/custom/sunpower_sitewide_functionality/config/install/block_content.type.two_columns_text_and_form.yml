@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: two_columns_text_and_form
+label: 'Two Columns - Text and Form'
+revision: 0
+description: ''

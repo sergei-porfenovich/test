@@ -1,0 +1,24 @@
+// =============================================================================
+// HEADER
+// =============================================================================
+
+// Header Top.
+.region-header-top {
+  background: linear-gradient(to right, #006fbb 0%, #008aba 40%, #008aba 40%, #008aba 60%, #006fbb 100%);
+  color: $white;
+  height: 50px;
+
+  // Links.
+  a,
+  a:visited {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+// Header.
+.region-header {
+  @include breakpoint($bp-medium-up) {
+    border-bottom: 1px solid #cedde5;
+  }
+}

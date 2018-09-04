@@ -1,0 +1,82 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.page
+    - paragraphs.paragraphs_type.block_embed
+    - paragraphs.paragraphs_type.body
+    - paragraphs.paragraphs_type.body_and_form
+    - paragraphs.paragraphs_type.divider
+    - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.slideshow_gallery
+    - paragraphs.paragraphs_type.two_column
+  module:
+    - entity_reference_revisions
+id: node.page.field_components
+field_name: field_components
+entity_type: node
+bundle: page
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      hero: hero
+      slideshow: slideshow
+      slideshow_gallery: slideshow_gallery
+      body: body
+      form: form
+      body_and_form: body_and_form
+      two_column: two_column
+      block_embed: block_embed
+      divider: divider
+    target_bundles_drag_drop:
+      hero:
+        enabled: true
+        weight: -27
+      slideshow:
+        enabled: true
+        weight: -26
+      slideshow_gallery:
+        enabled: true
+        weight: -25
+      body:
+        enabled: true
+        weight: -24
+      form:
+        enabled: true
+        weight: -23
+      body_and_form:
+        enabled: true
+        weight: -22
+      two_column:
+        enabled: true
+        weight: -21
+      block_embed:
+        enabled: true
+        weight: -20
+      divider:
+        enabled: true
+        weight: -19
+      block_and_form:
+        weight: -18
+        enabled: false
+      slideshow_item:
+        weight: -17
+        enabled: false
+      slideshow_gallery_item:
+        weight: -16
+        enabled: false
+      slideshow_gallery_items:
+        weight: -15
+        enabled: false
+field_type: entity_reference_revisions

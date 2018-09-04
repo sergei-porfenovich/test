@@ -1,0 +1,42 @@
+// =============================================================================
+// VIEW - EMPLOYEE
+// =============================================================================
+
+.block-views-blockemployee-block-1 {
+
+  // Title.
+  > h2 {
+    @include font-size(40, 48);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.view-employee {
+
+  // Image.
+  &__image {
+    img {
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+  }
+
+  // Title.
+  &__title {
+    @include font-size(32, 40);
+    border-bottom: 2px solid #f0f0f0;
+    color: $text--dark;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+
+    // Links.
+    a,
+    a:visited {
+      text-decoration: none;
+    }
+  }
+}

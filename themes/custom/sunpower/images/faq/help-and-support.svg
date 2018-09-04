@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="125px" viewBox="0 0 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>help-and-support</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-11.6900276%" x2="50%" y2="112.844669%" id="linearGradient-1">
+            <stop stop-color="#23A5AE" offset="0%"></stop>
+            <stop stop-color="#3F9B75" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="faq" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sp-sunpowercom-master-dealer-faq-01" transform="translate(-1108.000000, -942.000000)" fill="url(#linearGradient-1)">
+            <g id="help-and-support" transform="translate(1108.000000, 942.000000)">
+                <path d="M62.5,125 C27.9822031,125 0,97.0177969 0,62.5 C0,27.9822031 27.9822031,0 62.5,0 C97.0177969,0 125,27.9822031 125,62.5 C125,97.0177969 97.0177969,125 62.5,125 Z M62.5,122 C95.3609426,122 122,95.3609426 122,62.5 C122,29.6390574 95.3609426,3 62.5,3 C29.6390574,3 3,29.6390574 3,62.5 C3,95.3609426 29.6390574,122 62.5,122 Z" id="Oval" fill-rule="nonzero"></path>
+                <path d="M63,31 C48.6422214,31 37,42.7236369 37,57.1818182 L37,77.5454545 C37,82.3745449 40.8711115,86.2727273 45.6666667,86.2727273 L54.3333333,86.2727273 L54.3333333,63 L42.7777778,63 L42.7777778,57.1818182 C42.7777778,45.9236367 51.8200003,36.8181818 63,36.8181818 C74.1799994,36.8181818 83.2222222,45.9236367 83.2222222,57.1818182 L83.2222222,63 L71.6666667,63 L71.6666667,86.2727273 L83.2222222,86.2727273 L83.2222222,89.1818182 L63,89.1818182 L63,95 L80.3333333,95 C85.1288883,95 89,91.1018176 89,86.2727273 L89,57.1818182 C89,42.7236356 77.3577758,31 63,31 Z" id="Fill-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

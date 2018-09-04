@@ -1,0 +1,22 @@
+uuid: 0b919976-22f1-4102-9ceb-a6cc627b23da
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sunpower
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: sunpower_content
+theme: sunpower
+region: content
+weight: -7
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

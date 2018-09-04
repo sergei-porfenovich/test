@@ -1,0 +1,141 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow_gallery.field_slideshow_gallery_item
+    - paragraphs.paragraphs_type.slideshow_gallery
+  module:
+    - fences
+    - field_group
+    - slick_paragraphs
+third_party_settings:
+  field_group:
+    group_inner:
+      children:
+        - field_slideshow_gallery_item
+      parent_name: group_content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: inner
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Inner
+      region: content
+    group_content:
+      children:
+        - group_inner
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: paragraph-slideshow-gallery__content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Content
+      region: content
+id: paragraph.slideshow_gallery.default
+targetEntityType: paragraph
+bundle: slideshow_gallery
+mode: default
+content:
+  field_slideshow_gallery_item:
+    type: slick_paragraphs
+    weight: 2
+    label: hidden
+    settings:
+      optionset: slideshow_gallery_for
+      optionset_thumbnail: slideshow_gallery_nav
+      skin: ''
+      skin_thumbnail: ''
+      image_style: slideshow_gallery_large
+      thumbnail_style: slideshow_gallery_thumbnail_large
+      responsive_image_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      box_style: ''
+      box_media_style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      view_mode: default
+      ratio: ''
+      iframe_lazy: true
+      image: field_image
+      overlay: ''
+      title: ''
+      link: ''
+      layout: right
+      class: ''
+      cache: 0
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: default
+      vanilla: false
+      background: false
+      caption:
+        field_body: '0'
+        field_image: '0'
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      preserve_keys: false
+      thumbnail_caption: ''
+      visible_items: 0
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+      icon: ''
+      grid: 0
+      grid_header: ''
+      grid_medium: 0
+      grid_small: 0
+      id: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: slideshow-gallery__item
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    region: content
+hidden: {  }

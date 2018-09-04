@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies: {  }
+name: thumbnail
+label: Thumbnail
+effects:
+  a8ad5a3d-b0b3-4836-a27b-a45e7aa39e8c:
+    uuid: a8ad5a3d-b0b3-4836-a27b-a45e7aa39e8c
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 100
+      upscale: true
+  c00d5713-db11-4b0f-a977-f93ee693fa4c:
+    uuid: c00d5713-db11-4b0f-a977-f93ee693fa4c
+    id: image_crop
+    weight: 2
+    data:
+      width: 100
+      height: 100
+      anchor: center-center
+pipeline: __default__

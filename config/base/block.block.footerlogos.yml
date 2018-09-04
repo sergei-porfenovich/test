@@ -1,0 +1,25 @@
+uuid: d44e7b33-66fc-4370-b55d-2ae98a0974fd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ad45ef76-0139-46c1-8ad4-5302d964e9f6'
+  module:
+    - block_content
+  theme:
+    - sunpower
+id: footerlogos
+theme: sunpower
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:ad45ef76-0139-46c1-8ad4-5302d964e9f6'
+settings:
+  id: 'block_content:ad45ef76-0139-46c1-8ad4-5302d964e9f6'
+  label: 'Footer logos'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

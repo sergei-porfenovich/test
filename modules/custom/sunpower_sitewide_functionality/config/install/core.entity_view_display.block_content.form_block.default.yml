@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.form_block
+    - field.field.block_content.form_block.body
+    - field.field.block_content.form_block.field_webform
+  module:
+    - field_group
+    - text
+    - webform
+third_party_settings:
+  field_group:
+    group_center:
+      children:
+        - body
+        - field_webform
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: text-align-center
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: center
+      region: content
+id: block_content.form_block.default
+targetEntityType: block_content
+bundle: form_block
+mode: default
+content:
+  body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_webform:
+    weight: 2
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }

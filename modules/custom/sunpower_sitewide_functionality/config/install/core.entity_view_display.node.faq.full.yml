@@ -1,0 +1,30 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.faq.body
+    - field.field.node.faq.field_faq_category
+    - node.type.faq
+  module:
+    - text
+    - user
+id: node.faq.full
+targetEntityType: node
+bundle: faq
+mode: full
+content:
+  body:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_faq_category: true

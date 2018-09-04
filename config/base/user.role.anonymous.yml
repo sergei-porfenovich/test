@@ -1,0 +1,20 @@
+uuid: b967390e-0037-4f73-8df1-93d0806fafbe
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'toggle disqus comments'
+  - 'use text format restricted_html'
+  - 'view disqus comments'

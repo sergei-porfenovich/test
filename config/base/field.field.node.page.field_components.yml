@@ -1,0 +1,72 @@
+uuid: ec93a88a-63de-4dc2-81d9-840c551addd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.page
+    - paragraphs.paragraphs_type.block_embed
+    - paragraphs.paragraphs_type.body
+    - paragraphs.paragraphs_type.body_and_form
+    - paragraphs.paragraphs_type.divider
+    - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.two_column
+  module:
+    - entity_reference_revisions
+id: node.page.field_components
+field_name: field_components
+entity_type: node
+bundle: page
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      hero: hero
+      slideshow: slideshow
+      body: body
+      form: form
+      body_and_form: body_and_form
+      two_column: two_column
+      block_embed: block_embed
+      divider: divider
+    target_bundles_drag_drop:
+      hero:
+        enabled: true
+        weight: -19
+      slideshow:
+        enabled: true
+        weight: -18
+      body:
+        enabled: true
+        weight: -17
+      form:
+        enabled: true
+        weight: -16
+      body_and_form:
+        enabled: true
+        weight: -15
+      two_column:
+        enabled: true
+        weight: -14
+      block_embed:
+        enabled: true
+        weight: -13
+      divider:
+        enabled: true
+        weight: -12
+      block_and_form:
+        weight: -11
+        enabled: false
+      slideshow_item:
+        weight: 11
+        enabled: false
+field_type: entity_reference_revisions

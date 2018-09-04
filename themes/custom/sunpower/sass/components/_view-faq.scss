@@ -1,0 +1,111 @@
+// =============================================================================
+// VIEW - FAQ
+// =============================================================================
+
+.view-faq {
+
+  // Content.
+  .view-content {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 0 20px;
+      padding: 0;
+
+      // Remove dot.
+      &:before {
+        display: none;
+      }
+
+      // Last.
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    // Section title.
+    h3 {
+      @include font-size(32, 40);
+      border-bottom: 2px solid #f0f0f0;
+      color: $text--dark;
+      font-weight: 400;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  // Title.
+  &__title {
+    @include font-size(18);
+    font-weight: 400;
+    margin-bottom: 5px;
+
+    // Links.
+    a,
+    a:visited {
+      text-decoration: none;
+
+      // Hover and focus.
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Authored on.
+  &__authored-on {
+    @include font-size(14, 14);
+    color: #999;
+    font-style: italic;
+
+    &--label {
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+
+  // Icon.
+  &__icon {
+    background-size: cover;
+    display: block;
+    height: 125px;
+    margin: 0 auto 20px;
+    width: 125px;
+
+    // Financial Options.
+    &-6 {
+      background-image: url("../images/faq/financial-options.svg");
+    }
+
+    // Help & Support.
+    &-7 {
+      background-image: url("../images/faq/help-and-support.svg");
+    }
+
+    // How To Buy.
+    &-8 {
+      background-image: url("../images/faq/how-to-buy.svg");
+    }
+
+    // Installation Process.
+    &-9 {
+      background-image: url("../images/faq/installation-process.svg");
+    }
+
+    // Solar Technology.
+    &-10 {
+      background-image: url("../images/faq/solar-technology.svg");
+    }
+
+    // SunPower Products.
+    &-11 {
+      background-image: url("../images/faq/sunpower-products.svg");
+    }
+  }
+}

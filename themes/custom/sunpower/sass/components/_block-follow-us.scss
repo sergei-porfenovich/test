@@ -1,0 +1,81 @@
+// =============================================================================
+// BLOCK - FOLLOW US
+// =============================================================================
+
+#block-followus {
+  margin-bottom: 20px;
+
+  @include breakpoint($bp-medium-up) {
+    clear: both;
+    float: left;
+    margin-bottom: 0;
+    width: span(4 wide);
+  }
+
+  @include breakpoint($bp-large-up) {
+    border-left: 1px solid #3e3e40;
+    clear: none;
+    padding-left: span(1);
+    width: span(3 wide);
+  }
+
+  h2 {
+    @include font-size(11, 15);
+    color: $white;
+    font-weight: 700;
+    letter-spacing: tracking(2);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+      list-style: none;
+      margin: 0 0 10px;
+      padding: 0 0 0 30px;
+      position: relative;
+      width: 50%;
+
+      @include breakpoint($bp-large-up) {
+        float: none;
+        width: auto;
+      }
+
+      // Last.
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Icon.
+  i {
+    display: block;
+    font-size: 18px;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 20px;
+  }
+
+  // Links.
+  a,
+  a:visited {
+    @include font-size(13, 18);
+    color: #74747a;
+    display: block;
+    text-decoration: none;
+
+    // Hover and focus.
+    &:hover,
+    &:focus {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}

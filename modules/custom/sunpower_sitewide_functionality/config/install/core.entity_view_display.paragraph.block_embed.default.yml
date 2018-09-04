@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_embed.field_block_embed
+    - paragraphs.paragraphs_type.block_embed
+  module:
+    - block_field
+    - fences
+id: paragraph.block_embed.default
+targetEntityType: paragraph
+bundle: block_embed
+mode: default
+content:
+  field_block_embed:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: paragraph-block-embed__block
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: block_field
+    region: content
+hidden: {  }

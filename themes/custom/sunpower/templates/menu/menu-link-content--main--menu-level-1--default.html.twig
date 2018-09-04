@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a menu link entity entity.
+ *
+ * Available variables:
+ * - menu_link_content: Menu link entity.
+ * - show_item_link: Indicator for menu item link.
+ *
+ * @see template_preprocess_menu_link_content()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set entityObject = elements['#menu_link_content'] %}
+{% set rendered_content = content|without('field_description', 'field_image') %}
+
+{% if content.field_image|render %}
+  {{ link(content.field_image, entityObject.getUrlObject(), { 'class' : ['menu-item__field-link'] }) }}
+{% endif %}
+
+{% if content.field_description|render %}
+  {{ link(content.field_description, entityObject.getUrlObject(), { 'class' : ['menu-item__field-link'] }) }}
+{% endif %}
+
+{% if rendered_content %}
+  {{ rendered_content }}
+{% endif %}

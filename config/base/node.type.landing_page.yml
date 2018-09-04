@@ -1,0 +1,17 @@
+uuid: 81884b7f-610d-41f7-81d2-b384284fe4d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Landing Page'
+type: landing_page
+description: 'Template for the Landing Page'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

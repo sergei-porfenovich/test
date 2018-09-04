@@ -1,0 +1,9 @@
+uuid: 38496462-c521-491b-a3cb-f443597ff0d0
+langcode: en
+status: true
+dependencies: {  }
+id: block_and_form
+label: 'Block and form'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

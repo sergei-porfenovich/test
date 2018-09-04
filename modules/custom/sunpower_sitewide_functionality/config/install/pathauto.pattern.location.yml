@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: location
+label: Location
+type: 'canonical_entities:node'
+pattern: 'location/[node:title]'
+selection_criteria:
+  cefc5570-21c5-4091-b8c9-9f094338be81:
+    id: node_type
+    bundles:
+      store: store
+    negate: false
+    context_mapping:
+      node: node
+    uuid: cefc5570-21c5-4091-b8c9-9f094338be81
+selection_logic: and
+weight: -5
+relationships: {  }

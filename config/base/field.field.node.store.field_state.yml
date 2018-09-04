@@ -1,0 +1,21 @@
+uuid: 2de50d86-f088-45b3-ac48-163cc0257af2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_state
+    - node.type.store
+  module:
+    - options
+id: node.store.field_state
+field_name: field_state
+entity_type: node
+bundle: store
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

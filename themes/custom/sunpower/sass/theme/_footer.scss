@@ -1,0 +1,82 @@
+// =============================================================================
+// FOOTER
+// =============================================================================
+
+footer[role="contentinfo"] {
+  background-color: $black;
+  color: $white;
+}
+
+.region-footer-top {
+  background-color: #262631;
+  margin-top: 46px;
+  padding-top: 60px;
+  position: relative;
+
+  @include breakpoint($bp-medium-up) {
+    padding-bottom: 50px;
+  }
+
+  // Triangle.
+  &:before {
+    @include horizontal-center;
+    border-color: transparent transparent #262631;
+    border-style: solid;
+    border-width: 0 30px 20px;
+    content: "";
+    height: 0;
+    top: -20px;
+    width: 0;
+  }
+
+  // Back to top.
+  .back-to-top {
+    @include horizontal-center;
+    display: block;
+    height: 60px;
+    top: 0;
+    width: 60px;
+
+    // Arrow line.
+    &:after {
+      @include horizontal-center;
+      background-color: $brand--orange;
+      content: "";
+      height: 28px;
+      width: 1px;
+    }
+
+    span {
+      display: block;
+      position: relative;
+
+      em {
+        @include element-focusable;
+      }
+
+      // Arrow point.
+      &:before,
+      &:after {
+        @include horizontal-center;
+        background: $brand--orange;
+        content: "";
+        display: block;
+        height: 21px;
+        top: -5px;
+        width: 1px;
+      }
+
+      // Left.
+      &:before {
+        margin-left: -9px;
+        transform: rotate(55deg);
+      }
+
+      // Right.
+      &:after {
+        margin-left: 8px;
+        transform: rotate(-55deg);
+      }
+    }
+  }
+}

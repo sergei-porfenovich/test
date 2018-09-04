@@ -1,0 +1,17 @@
+uuid: 03f95618-5d42-4e68-9853-1d0ea42a6b27
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: menu_dropdown_medium
+label: 'Menu dropdown medium'
+effects:
+  967c5584-b948-4344-bd16-e4e9df205b67:
+    uuid: 967c5584-b948-4344-bd16-e4e9df205b67
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 135
+      height: 135
+      crop_type: focal_point

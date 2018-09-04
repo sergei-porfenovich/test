@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_small_2x
+label: 'Hero Small 2x'
+effects:
+  453d9e8c-1953-450a-ad86-b8ef853128fd:
+    uuid: 453d9e8c-1953-450a-ad86-b8ef853128fd
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 840
+      crop_type: focal_point
+pipeline: __default__

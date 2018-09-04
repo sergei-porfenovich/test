@@ -1,0 +1,17 @@
+uuid: 6f82c19e-e48d-4713-993a-02f8854bbcb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: two_column_list_large_2x
+label: 'Two Column List Large 2x'
+effects:
+  cb2fbed6-f345-4eda-989a-1859ad0891c4:
+    uuid: cb2fbed6-f345-4eda-989a-1859ad0891c4
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1340
+      height: 1000
+      crop_type: focal_point

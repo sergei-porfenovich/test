@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: blog_node_medium_2x
+label: 'Blog Node Medium 2x'
+effects:
+  20aeb8b6-471f-4a1d-a716-5aa946951966:
+    uuid: 20aeb8b6-471f-4a1d-a716-5aa946951966
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 950
+      height: 950
+      crop_type: focal_point
+pipeline: __default__

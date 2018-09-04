@@ -1,0 +1,49 @@
+// =============================================================================
+// PARAGRAPH - TWO COLUMN LAYOUT
+// =============================================================================
+
+.paragraph-two-column {
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  @include breakpoint($bp-medium-up) {
+    padding-bottom: 90px;
+    padding-top: 90px;
+  }
+
+  // Inner.
+  .inner {
+    @include breakpoint($bp-medium-up) {
+      display: flex;
+    }
+  }
+
+  // Remove bottom margin.
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  // First and last.
+  &__first,
+  &__last {
+    @include breakpoint($bp-medium-up) {
+      width: 48%;
+    }
+  }
+
+  // First.
+  &__first {
+    margin-bottom: 20px;
+
+    @include breakpoint($bp-medium-up) {
+      margin-bottom: 0;
+    }
+  }
+
+  // Last.
+  &__last {
+    @include breakpoint($bp-medium-up) {
+      margin-left: auto;
+    }
+  }
+}

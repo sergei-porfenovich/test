@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.block_embed
+    - paragraphs.paragraphs_type.body
+    - paragraphs.paragraphs_type.body_and_form
+    - paragraphs.paragraphs_type.divider
+    - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.two_column
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_components
+field_name: field_components
+entity_type: node
+bundle: landing_page
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      block_embed: block_embed
+      body: body
+      body_and_form: body_and_form
+      divider: divider
+      form: form
+      hero: hero
+      two_column: two_column
+    target_bundles_drag_drop:
+      block_embed:
+        enabled: true
+        weight: 10
+      body:
+        enabled: true
+        weight: 11
+      body_and_form:
+        enabled: true
+        weight: 12
+      divider:
+        enabled: true
+        weight: 13
+      form:
+        enabled: true
+        weight: 14
+      hero:
+        enabled: true
+        weight: 15
+      image_full_width:
+        weight: 16
+        enabled: false
+      two_column:
+        enabled: true
+        weight: 17
+      views_embed:
+        enabled: true
+        weight: 18
+field_type: entity_reference_revisions

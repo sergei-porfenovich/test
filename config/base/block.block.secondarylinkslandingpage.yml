@@ -1,0 +1,41 @@
+uuid: 1854906a-60b0-4721-b316-ebe8731ae283
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:518b4a1c-4897-46b1-b273-bf54414836dc'
+  module:
+    - block_content
+    - ctools
+    - node
+  theme:
+    - sunpower
+id: secondarylinkslandingpage
+theme: sunpower
+region: header_top
+weight: 0
+provider: null
+plugin: 'block_content:518b4a1c-4897-46b1-b273-bf54414836dc'
+settings:
+  id: 'block_content:518b4a1c-4897-46b1-b273-bf54414836dc'
+  label: 'Secondary links - Landing Page'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

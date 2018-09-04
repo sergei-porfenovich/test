@@ -1,0 +1,36 @@
+uuid: cf3d992d-7a98-498c-b64d-79b571e4fe7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_career_experience
+field_name: field_career_experience
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Trainee
+      label: Trainee
+    -
+      value: Junior
+      label: Junior
+    -
+      value: Middle
+      label: Middle
+    -
+      value: Senior
+      label: Senior
+    -
+      value: Executive
+      label: Executive
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

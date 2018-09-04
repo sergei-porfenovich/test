@@ -1,0 +1,14 @@
+uuid: 89101efb-7a7c-4883-9afd-5c5041fd72b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.dealer
+  module:
+    - user
+id: user_add_role_action.dealer
+label: 'Add the Dealer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: dealer

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: blog_teaser_medium
+label: 'Blog Teaser Medium'
+effects:
+  2f996e0c-44a2-4845-ac0b-c1d8c38da2aa:
+    uuid: 2f996e0c-44a2-4845-ac0b-c1d8c38da2aa
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 475
+      height: 267
+      crop_type: focal_point
+pipeline: __default__

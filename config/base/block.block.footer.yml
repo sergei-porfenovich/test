@@ -1,0 +1,32 @@
+uuid: 1c341f5d-dadf-49a7-acb8-dafe659adfad
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - ctools
+    - system
+  theme:
+    - sunpower
+id: footer
+theme: sunpower
+region: footer_top
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

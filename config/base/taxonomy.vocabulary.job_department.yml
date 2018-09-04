@@ -1,0 +1,9 @@
+uuid: b302f986-9ba0-4139-af57-08845a949171
+langcode: en
+status: true
+dependencies: {  }
+name: 'Job department'
+vid: job_department
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: menu_dropdown_medium_2x
+label: "Menu dropdown medium\t2x"
+effects:
+  3cb69eab-4875-49a0-8ac6-3f05e508d974:
+    uuid: 3cb69eab-4875-49a0-8ac6-3f05e508d974
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 270
+      height: 270
+      crop_type: focal_point
+pipeline: __default__

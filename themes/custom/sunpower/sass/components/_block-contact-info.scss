@@ -1,0 +1,44 @@
+// =============================================================================
+// BLOCK - CONTACT INFO
+// =============================================================================
+
+#block-contactinfo {
+  margin-bottom: 20px;
+  padding-left: 35px;
+  position: relative;
+
+  @include breakpoint($bp-medium-up) {
+    float: left;
+    width: span(4 wide);
+  }
+
+  @include breakpoint($bp-large-up) {
+    margin-bottom: 0;
+    padding-right: span(1);
+    width: span(3 wide);
+  }
+
+  // Icon.
+  i {
+    border-radius: 50%;
+    border: 2px solid $brand--orange;
+    display: block;
+    font-size: 15px;
+    height: 25px;
+    left: 0;
+    line-height: 12px;
+    padding: 5px;
+    position: absolute;
+    top: 5px;
+    width: 25px;
+  }
+
+  p {
+    @include font-size(12, 17);
+    color: $brand--orange;
+    font-weight: 700;
+    letter-spacing: tracking(200);
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+}

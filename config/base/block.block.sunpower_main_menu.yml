@@ -1,0 +1,43 @@
+uuid: 6262f0d6-7f6a-4e5e-a01a-dd7ba688643b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - node
+    - system
+  theme:
+    - sunpower
+_core:
+  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
+id: sunpower_main_menu
+theme: sunpower
+region: header
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      career: career
+      employee: employee
+      faq: faq
+      media: media
+      page: page
+      portfolio_item: portfolio_item
+      service: service
+      store: store
+      webform: webform
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

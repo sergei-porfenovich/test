@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="125px" viewBox="0 0 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>installation-process</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F5515F" offset="0%"></stop>
+            <stop stop-color="#9F041B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="faq" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sp-sunpowercom-master-dealer-faq-01" transform="translate(-208.000000, -942.000000)">
+            <g id="installation-process" transform="translate(208.000000, 942.000000)">
+                <path d="M62.5,125 C27.9822031,125 0,97.0177969 0,62.5 C0,27.9822031 27.9822031,0 62.5,0 C97.0177969,0 125,27.9822031 125,62.5 C125,97.0177969 97.0177969,125 62.5,125 Z M62.5,122 C95.3609426,122 122,95.3609426 122,62.5 C122,29.6390574 95.3609426,3 62.5,3 C29.6390574,3 3,29.6390574 3,62.5 C3,95.3609426 29.6390574,122 62.5,122 Z" id="Oval" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                <g id="Group-19" transform="translate(35.000000, 31.000000)">
+                    <rect id="Rectangle-path" transform="translate(5.500000, 54.000000) scale(1, -1) translate(-5.500000, -54.000000) " x="2" y="52" width="7" height="4"></rect>
+                    <rect id="Rectangle-path" transform="translate(5.500000, 19.000000) scale(1, -1) translate(-5.500000, -19.000000) " x="2" y="17" width="7" height="4"></rect>
+                    <rect id="Rectangle-path" transform="translate(5.500000, 25.000000) scale(1, -1) translate(-5.500000, -25.000000) " x="2" y="23" width="7" height="4"></rect>
+                    <rect id="Rectangle-path" transform="translate(5.500000, 43.000000) scale(1, -1) translate(-5.500000, -43.000000) " x="2" y="41" width="7" height="4"></rect>
+                    <rect id="Rectangle-path" transform="translate(5.500000, 31.000000) scale(1, -1) translate(-5.500000, -31.000000) " x="2" y="29" width="7" height="4"></rect>
+                    <rect id="Rectangle-path" transform="translate(5.500000, 48.000000) scale(1, -1) translate(-5.500000, -48.000000) " x="2" y="46" width="7" height="4"></rect>
+                    <rect id="Rectangle-path" transform="translate(5.500000, 14.000000) scale(1, -1) translate(-5.500000, -14.000000) " x="2" y="12" width="7" height="4"></rect>
+                    <rect id="Rectangle-path" transform="translate(5.500000, 37.000000) scale(1, -1) translate(-5.500000, -37.000000) " x="2" y="35" width="7" height="4"></rect>
+                    <path d="M0,0 L0,1.62429311 L5.88299769,1.62429311 L5.88299769,3.34367063 L0,3.34367063 L0,7.35528956 L5.88299769,7.35528956 L5.88299769,9.07466708 L0,9.07466708 L0,12.9825576 L5.88299769,12.9825576 L5.88299769,14.7019351 L0,14.7019351 L0,18.5053113 L5.88299769,18.5053113 L5.88299769,20.2246888 L0,20.2246888 L0,24.2363078 L5.88299769,24.2363078 L5.88299769,25.9556853 L0,25.9556853 L0,29.8635758 L5.88299769,29.8635758 L5.88299769,31.5829533 L0,31.5829533 L0,35.3863295 L5.88299769,35.3863295 L5.88299769,37.105707 L0,37.105707 L0,41.117326 L5.88299769,41.117326 L5.88299769,42.8367035 L0,42.8367035 L0,46.744594 L5.88299769,46.744594 L5.88299769,48.4639715 L0,48.4639715 L0,56 L67,0 L0,0 Z M11.464986,10.8734126 L36.6174239,10.8734126 L11.464986,31.8957103 L11.464986,10.8734126 Z" id="Shape" fill="url(#linearGradient-1)" fill-rule="nonzero" transform="translate(33.500000, 28.000000) scale(1, -1) translate(-33.500000, -28.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

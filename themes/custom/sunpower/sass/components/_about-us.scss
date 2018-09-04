@@ -1,0 +1,63 @@
+// =============================================================================
+// ABOUT US
+// =============================================================================
+
+.about-us {
+
+  &__company-history {
+    background: linear-gradient(#007399, #00ace6);
+    color: $white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__company-history-label {
+    @include font-size(32, 48);
+    color: $white;
+
+    @include breakpoint($bp-medium-up) {
+      @include font-size(40, 48);
+    }
+  }
+
+  // Item.
+  &__item {
+    @include breakpoint($bp-large-up) {
+      align-items: center;
+      display: flex;
+      padding-bottom: 0;
+    }
+
+    // Last.
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    // Odd.
+    &:nth-child(odd) {
+      @include breakpoint($bp-large-up) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  // Column.
+  &__column {
+    @include breakpoint($bp-large-up) {
+      width: 50%;
+    }
+
+    // Content.
+    &-content {
+      padding-bottom: 20px;
+      padding-top: 20px;
+
+      @include breakpoint($bp-large-up) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+uuid: e436e531-9d64-44de-8018-aff4787a8fee
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_large
+    - image.style.hero_large_2x
+    - image.style.hero_medium
+    - image.style.hero_medium_2x
+    - image.style.hero_small
+    - image.style.hero_small_2x
+  theme:
+    - sunpower
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    breakpoint_id: sunpower.group1.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_large
+  -
+    breakpoint_id: sunpower.group1.large
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_large_2x
+  -
+    breakpoint_id: sunpower.group1.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_medium
+  -
+    breakpoint_id: sunpower.group1.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_medium_2x
+  -
+    breakpoint_id: sunpower.group1.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_small
+  -
+    breakpoint_id: sunpower.group1.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_small_2x
+breakpoint_group: SunPower
+fallback_image_style: hero_large

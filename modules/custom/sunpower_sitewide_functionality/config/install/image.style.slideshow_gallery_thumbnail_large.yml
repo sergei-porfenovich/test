@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: slideshow_gallery_thumbnail_large
+label: 'Slideshow Gallery Thumbnail Large'
+effects:
+  4acb1f6c-c947-4beb-8056-f60a37942b11:
+    uuid: 4acb1f6c-c947-4beb-8056-f60a37942b11
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 80
+      height: 80
+      crop_type: focal_point
+pipeline: __default__

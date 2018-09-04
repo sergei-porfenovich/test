@@ -1,0 +1,35 @@
+// =============================================================================
+// FONTS
+// =============================================================================
+
+// Defaults.
+$base-font-size:           16px; // The font size set on the root html element.
+$base-font-size-integer:   strip-units($base-font-size);
+$base-line-height:         24px; // This line-height determines the basic unit of vertical rhythm.
+
+// Font stacks.
+$arial-black:     "Arial Black", Gadget, sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+
+// Font Awesome.
+$fa: "FontAwesome";
+
+// Google fonts.
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700");
+$opensans: "Open Sans", sans-serif;
+
+// Font Awesome.
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+// Font stack variables.
+$base-font-family: $opensans;
+$font-body:        $opensans;
+$font-header:      $opensans;
+$font-monospace:   $courier;

@@ -1,0 +1,44 @@
+uuid: 4d4f40b0-c766-474f-ad16-ab7a3564bab5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_column.field_component_name
+    - field.field.paragraph.two_column.field_first_column
+    - field.field.paragraph.two_column.field_second_column
+    - paragraphs.paragraphs_type.two_column
+  module:
+    - text
+id: paragraph.two_column.default
+targetEntityType: paragraph
+bundle: two_column
+mode: default
+content:
+  field_component_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_first_column:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_second_column:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

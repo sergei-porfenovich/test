@@ -1,0 +1,33 @@
+uuid: 6cba8707-7d87-421b-b9de-60e73336e7b8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:844cc457-47e6-4fb4-8350-75be891358a4'
+  module:
+    - block_content
+    - ctools
+  theme:
+    - sunpower
+id: secondarylinks
+theme: sunpower
+region: header_top
+weight: 0
+provider: null
+plugin: 'block_content:844cc457-47e6-4fb4-8350-75be891358a4'
+settings:
+  id: 'block_content:844cc457-47e6-4fb4-8350-75be891358a4'
+  label: 'Secondary links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

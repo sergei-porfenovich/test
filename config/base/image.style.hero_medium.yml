@@ -1,0 +1,7 @@
+uuid: cdf2ce57-35c2-4350-a01f-c5b065e398dd
+langcode: en
+status: true
+dependencies: {  }
+name: hero_medium
+label: 'Hero medium'
+effects: {  }

@@ -1,0 +1,34 @@
+// =============================================================================
+// COPYRIGHT
+// =============================================================================
+
+#block-copyright {
+  border-top: 1px solid #3e3e40;
+  color: #74747a;
+  padding: 20px;
+  text-align: center;
+
+  // Remove bottom margin.
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    @include font-size(13, 18);
+    font-weight: 600;
+  }
+
+  // Links.
+  a,
+  a:visited {
+    color: #74747a;
+    text-decoration: none;
+
+    // Hover and focus.
+    &:hover,
+    &:focus {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+solar-calculator:
+  version: 1.x
+  js:
+    js/solar-calculator.js: { }
+    https://savingscalculator.test.sunpower.com/embed.js: { type: external , attributes: { defer: true, async: true } }

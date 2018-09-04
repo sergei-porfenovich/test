@@ -1,0 +1,29 @@
+uuid: 5b71cb29-a55d-446a-b050-de22533c8235
+langcode: en
+status: false
+dependencies:
+  module:
+    - ctools
+  theme:
+    - sunpower
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: sunpower_page_title
+theme: sunpower
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

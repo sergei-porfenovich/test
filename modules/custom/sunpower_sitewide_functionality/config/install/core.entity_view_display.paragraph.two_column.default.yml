@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_column.field_first_column
+    - field.field.paragraph.two_column.field_second_column
+    - paragraphs.paragraphs_type.two_column
+  module:
+    - fences
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_inner:
+      children:
+        - field_first_column
+        - field_second_column
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: inner
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Inner
+      region: content
+id: paragraph.two_column.default
+targetEntityType: paragraph
+bundle: two_column
+mode: default
+content:
+  field_first_column:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: paragraph-two-column__first
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+  field_second_column:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: paragraph-two-column__last
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    type: text_default
+    region: content
+hidden: {  }

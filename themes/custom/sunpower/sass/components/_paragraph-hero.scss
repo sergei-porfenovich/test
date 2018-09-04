@@ -1,0 +1,122 @@
+// =============================================================================
+// PARAGRAPH - HERO
+// =============================================================================
+
+.paragraph-hero {
+  overflow: hidden;
+  position: relative;
+  text-shadow: 0 3px 7px rgba($black, .15);
+
+  @include breakpoint($bp-large-up) {
+    max-height: 420px;
+    overflow: hidden;
+  }
+
+  // Content.
+  &__content {
+    color: $white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint($bp-large-up) {
+      @include vertical-center;
+      padding-bottom: 0;
+      padding-top: 0;
+      width: 100%;
+    }
+
+    // Inner.
+    .inner {
+      @include breakpoint($bp-medium-up) {
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+
+  // Body.
+  &__body {
+    text-align: center;
+
+    @include breakpoint($bp-medium-up) {
+      margin-bottom: 20px;
+      text-align: left;
+      width: span(6);
+    }
+
+    @include breakpoint($bp-medium-up) {
+      padding-right: gutter() * 2;
+    }
+
+    @include breakpoint($bp-large-up) {
+      width: span(8);
+    }
+
+    h2 {
+      @include font-size(24, 24);
+      color: $white;
+      font-weight: 400;
+      margin-bottom: 20px;
+      letter-spacing: tracking(-10);
+
+      @include breakpoint($bp-medium-up) {
+        @include font-size(38, 46);
+      }
+
+      @include breakpoint($bp-large-up) {
+        @include font-size(52, 52);
+      }
+    }
+
+    p {
+      @include breakpoint($bp-large-up) {
+        @include font-size(22);
+      }
+    }
+  }
+
+  // Image.
+  &__image {
+
+    // Overlay.
+    &:after {
+      background-color: rgba($black, .5);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+
+      @include breakpoint($bp-medium-up) {
+        display: none;
+      }
+    }
+
+    img {
+      @include horizontal-center;
+      display: block;
+      height: 100%;
+      max-width: none;
+      top: 0;
+      width: auto;
+
+      @include breakpoint($bp-medium) {
+        height: auto;
+        width: auto;
+      }
+
+      @include breakpoint($bp-large-up) {
+        position: relative;
+      }
+
+      @include breakpoint($bp-wide-up) {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+}

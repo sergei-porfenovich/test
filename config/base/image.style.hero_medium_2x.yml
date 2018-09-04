@@ -1,0 +1,7 @@
+uuid: 4a3f60d2-dc00-4436-a1fd-e7a8c84e9ee0
+langcode: en
+status: true
+dependencies: {  }
+name: hero_medium_2x
+label: 'Hero medium 2x'
+effects: {  }
